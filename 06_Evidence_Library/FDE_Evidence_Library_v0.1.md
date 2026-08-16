@@ -61,13 +61,18 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 
 **EV-EXT-003** ✅（隔离）｜湖南「智赋万企」报告｜同名异义样本｜Field Driven Engineering（共享驻场）≠ Forward Deployed Engineer；含 O-FDE 组织适配模型与 S.T.E.P. 四阶段｜第三方报告｜L3｜`ZCodeProject/FDE模式AI转型可行性分析.md`（Scribd 来源）｜2026-07-22｜仅作中国腰部企业落地约束的外部视角；DEC-2026-004 隔离｜无｜—｜Low-Medium｜2026-08-16
 
-## D 组｜来源缺失 / 待获取（🔴 禁止支撑 FACT）
+## D 组｜待获取与已补证（Palantir 批次已核验，2026-08-17，见 RN-20260817-001）
 
-**EV-PAL-001~003** 🔴｜Palantir｜Echo 职责 / Delta 职责与产品修改权 / Core 泛化机制（碎石路→高速公路：谁提交、谁判断 generalize、如何防污染）｜—｜目标 L1-L2：官方文档、Bob McGrew/Nabeel Qureshi 原始分享、前员工一手访谈｜本地仅存：deep-research 中 Palantir→JPMorgan 单例（L3）+ 官网审计对 AIP Bootcamp 的未核对标｜支撑目标：ORG-001~003、H-1｜2026-08-16 登记
+**EV-PAL-001** ✅｜Palantir｜Delta 官方定义 / Edge→Core 机制｜① Delta=Forward Deployed Software Engineer 官方代称（源自 NATO 字母表），与 Dev 分属 Business Development / Product Development 事业部；② Dev=「one capability, many customers」，Delta=「one customer, many capabilities」；③ Delta 常向核心产品回交代码，大功能须对照产品 roadmap 验证并入、由产品团队 review；④ 官方明确 Delta≠咨询顾问（部署既有产品、建长期方案）｜官方博客｜L1｜《Dev versus Delta: Demystifying engineering roles at Palantir》2019-04-08，blog.palantir.com/dev-versus-delta-demystifying-engineering-roles-at-palantir-ad44c2a6e87｜抓取 2026-08-17｜官方机制证据：Delta 代码回流 Core 的协调与评审流程｜ORG-002/003、DOC-007｜—｜High｜2026-08-17
+→ 注：该文未出现「Echo」一词；官方体系中与 Echo 职能对应的是 Deployment Strategist（官方博客《A Day in the Life of a Deployment Strategist》，两角色官方自述「界限经常模糊」）。
 
-**EV-LY-001~006** 🔴｜阿里瓴羊｜① 260 步催发货；② 顶尖投手 90 天调价行为=训练对象是优秀员工真实行为；③ 4+X（标准能力+企业特有数据/上下文/权限）；④ Business BA/AI Architect/企业内部首席教练三角色；⑤ 部署时间大头在岗位熟悉与业务调教；⑥ 灰度上岗（低谷验证→高峰测试→渐扩）｜目标 L2：E248 播客转写（本地缺失，DEC-2026-006）｜当前仅有任务书转述= L4｜支撑目标：H-2/H-7/H-8/H-9、ORG-004｜2026-08-16 登记
+**EV-PAL-002** ✅｜Palantir（前员工）｜泛化分工 / Foundry 起源 / 反方证据｜① FDE（驻场，每周 3-4 天在客户处）与 PD（产品开发）二分：「你的工作是解决问题、不用管过拟合；PD 的工作是把你做的泛化再卖给别人」；② FDE 手工苦活被产品化：Magritte→Contour→Workshop，「现在驱动公司 50%+ 收入，它叫 Foundry」；③ 2023 毛利 80% vs 埃森哲 32%；④ 客户团队 4-5 人、高速自治；⑤ 反方：技术债重、差旅失控、数据获取是政治问题、早期是「培养皿」；⑥ Airbus A350 制造提速 4x；⑦ 数据集成与 RBAC/审计是核心工作｜前员工回忆（8 年 FDE）｜L2｜Nabeel Qureshi《Reflections on Palantir》2024-10-15，nabeelqu.substack.com/p/reflections-on-palantir｜抓取 2026-08-17｜Edge→Core 的「泛化是 PD 的专职工作」与产品化的真实路径；同时是 FDE 模式成本侧的主要一手证据｜DOC-003/007、COM-004、ORG-003；反方→全模块｜—｜High｜2026-08-17
 
-**EV-POD-001** 🔴｜小宇宙 episode 68c6eb41｜Palantir FDE/Echo/Delta/Bob McGrew 二次解释｜播客｜L3（即使取得转写也仅 L3，须沿引用回溯 Bob McGrew/YC 原始分享）｜URL 在任务书 §11｜2026-08-16 登记
+**EV-PAL-003** 🟡｜Palantir（前高管口述）｜Echo/Delta 配对 / 碎石路→柏油高速 / 商业指标 / 定价｜① Echo=嵌入式分析师（客户现场、和最终用户交流、识别可解问题与 demo、维护客户关系；画像=领域专家+「异见者」+能看到 3x-10x 改进空间）；② Delta=快速写码的部署工程师（错配画像=工匠型完美主义者）；③ 泛化六步：现场建方案→带回产品团队→FDE 参与泛化讨论→找 3 个「微妙不同但同底层数学」的工作流→多客户共同设计→跨客户验证；④ 本体（Ontology）=防碎片化的平台机制（通用 schema+客户自定义类型）；⑤ FDE vs 咨询可观测指标：新客户早期亏损→约 1 年后毛利转正、现场团队缩小、产品变好、「挣得权利」；⑥ 两大内部指标：客户结果价值/合同规模 + 产品杠杆；⑦ 定价趋向 outcome-based、合同随价值增大（Kastle/HappyRobot 例）；⑧ 准入：必须进入 CEO 前五大问题；⑨ 自警：FDE 会漂移成咨询、产品-FDE 张力「对所有人都痛苦」；⑩ 100+ YC 创业公司在招 FDE｜YC Lightcone 播客（口述一手，页面记录为 AI 摘要）｜L2（内容）/L3（记录）｜《The FDE Playbook for AI Startups with Bob McGrew》2025-09-08，podcosmos.com/ycombinator/lightcone-podcast/…（YouTube 原片待逐段复核）｜抓取 2026-08-17｜ORG-001/002/003 的直接参照；COM-002/004、DOC-003/004/006/007 的首个单组织实证｜McGrew 自述反方见 ⑨｜Medium-High（内容）/Medium（记录）｜2026-08-17
+
+**EV-LY-001~006** 🔴｜阿里瓴羊｜① 260 步催发货；② 顶尖投手 90 天调价行为=训练对象是优秀员工真实行为；③ 4+X（标准能力+企业特有数据/上下文/权限）；④ Business BA/AI Architect/企业内部首席教练三角色；⑤ 部署时间大头在岗位熟悉与业务调教；⑥ 灰度上岗（低谷验证→高峰测试→渐扩）｜目标 L2：E248 播客转写｜本地复查（2026-08-17，协议 §第二轮）仍缺失，DEC-2026-006 继续成立；仅有任务书转述=L4｜支撑目标：H-2/H-7/H-8/H-9、ORG-004｜2026-08-16 登记，2026-08-17 复查
+
+**EV-POD-001** 🟡→**降级说明**｜小宇宙 episode 68c6eb41《极客飞行日志》｜Palantir FDE/Echo/Delta 二次解释｜页面自我声明「播客内容由 AI 结合公开资料生成」——**非人类访谈，AI 生成节目**｜只能作结构线索（L3 记录、L4 内容），不得独立支撑任何主张；其引用终点=Lightcone（已升级为 EV-PAL-003）｜抓取 2026-08-17｜任务书 §11「沿引用回溯原始分享」的怀疑被证明正确｜—｜—｜Low｜2026-08-17 更新
 
 **EV-TOM-001** 🔴｜Tomoro｜Field Deployment 模型、John Deere 案例、Evaluation 方法｜目标 L1-L2｜`tomoro.ai`（未抓取）+ OpenAI 收购后变化（并入 EV-OAI-002 待办）｜2026-08-16 登记
 

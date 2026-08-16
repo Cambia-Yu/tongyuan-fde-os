@@ -17,20 +17,20 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 |---|---|---|---|---|---|---|
 | DOC-001 | FDE 定义 | 面向真实业务结果的现场交付方式：从发现到生产发布的连续责任，非驻场开发/售前/PM 单一角色 | Evidence-backed | FACT（定义层面） | EV-OAI-001/002 | High |
 | DOC-002 | FDE vs 咨询/外包/SaaS/SI | 边界未研究；仅有「Deployment Leverage 差异」假设 | Researching | — | 待 G-06/G-10 | Low |
-| DOC-003 | Deployment Leverage | 假设：FDE 与咨询的核心差异是部署杠杆（同类新项目现场人力递减） | Researching | HYPOTHESIS | 待 G-06 | Low |
+| DOC-003 | Deployment Leverage | 假设：FDE 与咨询的核心差异是部署杠杆（同类新项目现场人力递减）；首个单组织实证已取得（Palantir 毛利 80% vs 埃森哲 32%；新客户约 1 年毛利转正、现场团队缩小） | Researching | HYPOTHESIS（行业级）/ Palantir 事实（L2） | EV-PAL-002/003；G-06 剩余跨组织验证 | Low-Medium |
 | DOC-004 | Value Depth | 假设：Trust→Access→Mission Criticality→Value Depth 是合同深化的真实结构；Land and Expand 是事实但「越签越贵」不是定义 | Researching | HYPOTHESIS | 待 G-07 | Low |
 | DOC-005 | 复杂度阶梯 | 默认从单次辅助起步，七级递升，每级升档需上级运行证据 | Designed | DESIGN DECISION（采信 L1 实践） | EV-ANT-001 | High |
 | DOC-006 | 卖结果≠outcome pricing | Value Unit 与 Pricing Mechanism 分离；禁止从「不卖人天」推出「必须结果付费」 | Researching | HYPOTHESIS | 待 G-08 | Medium |
-| DOC-007 | Edge→Core 学习循环 | 假设：前线碎石路应被修成 Core 高速公路；机制未知 | Researching | HYPOTHESIS | 待 G-01/G-09 | Low |
+| DOC-007 | Edge→Core 学习循环 | 假设：前线碎石路应被修成 Core 高速公路；机制在 Palantir 已充分实证（L1 官方回流流程 + L2 泛化分工与 Ontology），通元问科适用性待验 | Researching | Palantir 事实（L1+L2）/ HYPOTHESIS（通元问科适用） | EV-PAL-001/002/003 | Medium |
 | DOC-008 | 概念隔离 | 「Field Driven Engineering（湖南样本）」≠ 本系统 FDE | Designed | DESIGN DECISION | DEC-2026-004 | High |
 
 ## 02 Operating Model
 
 | Rule | 主题 | 当前规则 | 状态 | 知识状态 | 证据 | 置信 |
 |---|---|---|---|---|---|---|
-| ORG-001 | Echo-like 角色 | 假设：业务架构/问题发现/客户关系/业务结果归口 | Researching | HYPOTHESIS | 待 G-01 | Low |
-| ORG-002 | Delta-like 角色 | 假设：系统转化/数据连接/Agent/Eval/Production | Researching | HYPOTHESIS | 待 G-01 | Low |
-| ORG-003 | Core 公共能力层 | 假设：沉淀 Skill/Connector/Eval/Workflow/Runtime/模板；准入与泛化评审机制未设计 | Researching | HYPOTHESIS | 待 G-09 | Low |
+| ORG-001 | Echo-like 角色 | 假设：业务架构/问题发现/客户关系/业务结果归口；Palantir 参照=Echo/嵌入式分析师（画像：领域专家+异见者，看到 3x-10x 改进；官方对应岗为 Deployment Strategist） | Researching | HYPOTHESIS（通元问科）/ Palantir 事实（L2 口述） | EV-PAL-003；官方岗参照 EV-PAL-001 注 | Low-Medium |
+| ORG-002 | Delta-like 角色 | 假设：系统转化/数据连接/Agent/Eval/Production；Palantir 参照=Delta（FDSWE，官方术语；「one customer, many capabilities」，非咨询） | Researching | HYPOTHESIS（通元问科）/ Palantir 事实（L1+L2） | EV-PAL-001/003 | Low-Medium |
+| ORG-003 | Core 公共能力层 | 假设：沉淀 Skill/Connector/Eval/Workflow/Runtime/模板；泛化机制 Palantir 参照已核验（Delta 回交代码→产品团队 roadmap 验证+review；PD 专职泛化；多客户 FDE 共同设计；Ontology 防碎片），通元问科版未设计 | Researching | HYPOTHESIS（通元问科）/ 泛化机制为 Palantir 事实（L1+L2） | EV-PAL-001/002/003；G-09 剩余：防污染判据 | Medium |
 | ORG-004 | Client Coach | 假设：从客户内部选优秀业务专家参与 Golden Case/调教/验收（本土雏形=协会「年轻骨干」机制） | Researching | HYPOTHESIS | EV-TY-009；EV-LY 待补 | Medium-Low |
 | ORG-005 | 一人多角色边界 | Unknown：现阶段谁可兼任、何时必须分设 | Draft | Unknown | 待设计 | — |
 | ORG-006 | Delta 外包风险 | Unknown：外包后如何不退化为「需求定义+软件外包」 | Draft | Unknown | 待设计 | — |
@@ -58,7 +58,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | COM-001 | 信用阶梯 | 陌生→入口→关系→判断→交易→交付→Reference→机构（八级）；用可逆承诺改造一次性信任 | Researching | INFERENCE | EV-TY-008 | Medium-High |
 | COM-002 | 首单机制 | 低风险≠免费、付费≠commitment；真正变量是客户承诺向量（预算/sponsor/负责人/数据/用户/节奏/上线资源） | Researching | INFERENCE | EV-EXT-002 | Medium |
 | COM-003 | Value Unit / Pricing | Unknown：各公司实证未取得 | Researching | — | G-08 | — |
-| COM-004 | 四健康指标 | 假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标 | Researching | HYPOTHESIS | G-06 | Low |
+| COM-004 | 四健康指标 | 假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标；Palantir 版两大内部指标（结果价值/合同规模 + 产品杠杆）与之高度吻合（单组织） | Researching | HYPOTHESIS | EV-PAL-003（McGrew 两指标）；EV-PAL-002（毛利对比） | Low-Medium |
 | COM-005 | 不卖 ROI 保证 | 过程/里程碑保证（gate 未过则停），不承担不可控结果风险 | Designed | DESIGN DECISION | EV-TY-008 L120 | Medium-High |
 | COM-006 | 信用归因权 | 五个必须占住的可见位置（问题定义/指标共定/评审主持/复盘作者/高层关系） | Designed | DESIGN DECISION | EV-TY-008 | Medium |
 | COM-007 | 输出层信用纪律 | 官网三层信用划分；未证实宣称一律下线 | Designed | DESIGN DECISION | EV-TY-007 | High |

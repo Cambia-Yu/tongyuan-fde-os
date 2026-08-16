@@ -12,12 +12,12 @@ legend: 现有证据强度（High/Med/Low/None）× 对 FDE OS 的重要性（Hi
 
 | Gap | 主题 | 现有证据 | 重要性 | 优先级 | 影响的规则 |
 |---|---|---|---|---|---|
-| G-01 | Palantir Echo/Delta/Core 一手机制 | Low（仅二手+单例） | High | **P0** | ORG-001~003、H-1、Edge→Core |
-| G-02 | 瓴羊一手材料（E248 缺失） | None（任务书转述） | High | **P0** | ORG-004、H-2/H-7/H-8/H-9 |
+| G-01 | Palantir Echo/Delta/Core 一手机制 | **高（2026-08-17 批次完成）**：Delta=官方术语（L1）；泛化机制 L1+L2 双证；Echo 仅 L2 口述 | High | ✅ 基本关闭 | ORG-001~003、H-1、Edge→Core｜残余：Lightcone YouTube 原片复核、Echo 官方文档确认（见 RN-20260817-001 Remaining unknowns） |
+| G-02 | 瓴羊一手材料（E248 缺失） | None（任务书转述；2026-08-17 复查仍缺失） | High | **P0** | ORG-004、H-2/H-7/H-8/H-9 |
 | G-03 | Baseline & Benchmark 阶段方法 | Low（仅准入检查项） | High | **P0** | DEL 阶段 02、GATE-2 |
 | G-04 | Work Trace / 行为取证方法论 | Low（侧证 2 例） | High | **P0** | DEL 阶段 03、H-7 |
 | G-05 | 客户采用/业务结果阶段的链路位置 | Med（手册 Ch7 与十阶段链错位） | Med | P1 | DEL 链路重检 |
-| G-06 | Deployment Leverage 与四健康指标 | None | High | P1 | COM-004、H-4 |
+| G-06 | Deployment Leverage 与四健康指标 | **中（2026-08-17）**：Palantir 单组织实证（毛利 80% vs 32%、两指标）已取得，跨组织仍缺 | High | P1（降为跨组织验证） | COM-004、H-4 |
 | G-07 | Land & Expand vs Value Depth（事实/假设分界） | Low | Med-High | P1 | COM-002、H-5 |
 | G-08 | Value Unit vs Pricing Mechanism 各公司实证 | Low（瓴羊/Palantir 均缺） | High | P1 | COM-003、H-6 |
 | G-09 | Edge→Core 泛化与防污染机制 | None | High | P1 | ORG-003、C 系统 |
