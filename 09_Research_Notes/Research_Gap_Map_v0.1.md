@@ -22,8 +22,8 @@ legend: 现有证据强度（High/Med/Low/None）× 对 FDE OS 的重要性（Hi
 | G-08 | Value Unit vs Pricing Mechanism 各公司实证 | **中低（2026-08-17）**：瓴羊 E248 已取得坐席/成本替代与效果分成两类样本；Palantir/其他组织与行业级归纳仍缺 | High | P1（跨组织验证） | COM-003、H-6 |
 | G-09 | Edge→Core 泛化与防污染机制 | None | High | P1 | ORG-003、C 系统 |
 | G-10 | FDE 反方观点系统收集 | None | High | P1 | 全模块（§29 十问） |
-| G-11 | 受控上岗/灰度方法（Shadow→Assisted→Guarded→Full + Rollback） | **低-中（2026-08-17）**：手册有影子运行框架；瓴羊 E248 的低风险→高压力→逐步扩容样本已核，但通用方法与 Rollback 仍未系统化 | Med | P2 | DEL 阶段 07、H-9 |
-| G-12 | Eval 方法（Golden Dataset 大小/构建/回归） | Low | Med | P2 | DEL 阶段 06 |
+| G-11 | 受控上岗/回滚 | **高（2026-08-18 Batch 5 完成，Reviewer PASS）**：DEL-013+TOOL-009（四模式=可选控制模式、回滚十要素、演练三档、NIST Core Table 4 锚点）；余项=现场验证与跨组织回滚实证 | Med | 方法已建，转现场验证 | DEL-013、H-9 |
+| G-12 | Eval 方法 | **高（2026-08-18 Batch 5 完成，Reviewer PASS）**：DEL-012+TOOL-008（四对象分立、时序用途制、阈值三栏批准、EV-ANT-003 L1 锚点）；余项=现场验证 | Med | 方法已建，转现场验证 | DEL-012 |
 | G-13 | 内部项目 P0 材料补齐（四项目 26 项清单） | 部分 | High | P1（内部动作，非检索） | EV-TY-001~004 升级 |
 | G-14 | 工具品类中立研究（按阶段能力需求→再选厂商） | None | Med | P2 | TOOL 体系、§35/36 |
 | G-15 | Deployment Unit Economics（deploy 成本结构/人效曲线） | None | Med | P2 | COM-004 |

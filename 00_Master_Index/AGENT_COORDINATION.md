@@ -15,7 +15,8 @@
 
 - Issue #3：`Batch 4｜组织模型（Operating Model，候选设计）` —— **Reviewer 最终验收 PASS，已关闭**（2026-08-17T20:14Z，commit be9aa9f）
 - Issue #4：`现场学习闭环` —— **Reviewer 最终验收 PASS，已关闭**（2026-08-17T21:06Z，commit 276f463；状态=Designed 候选，U4/U5 首证后须重审）
-- Issue #5：`Batch 5｜评测方法与受控部署` —— 范围已通过（八条边界），**Builder 已提交实施（DEL-012/013 + TOOL-008/009），待 Reviewer 按两包分别验收**
+- Issue #5：`Batch 5｜评测方法与受控部署` —— **A/B 双包 PASS，已关闭**（2026-08-17T22:14Z）——交付侧十阶段方法/工具/判定标准齐装
+- 下一批：Issue #6 `Batch 6｜商业与价值机制（Commercial Engine）` —— **Builder 已起草，待 Reviewer 范围审查**
 
 ## 冲突裁决
 
