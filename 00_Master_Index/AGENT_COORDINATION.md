@@ -14,7 +14,7 @@
 ## 当前批次
 
 - Issue #3：`Batch 4｜组织模型（Operating Model，候选设计）` —— **Reviewer 最终验收 PASS，已关闭**（2026-08-17T20:14Z，commit be9aa9f）
-- 下一批：Issue #4 `现场学习闭环｜C 类变更提案 + 双读者手册整合` —— **Builder 起草中/待 Reviewer 审查与用户批准**（C 类：执行前须用户批准）
+- Issue #4：`现场学习闭环` —— **用户已批准推荐方案（2026-08-18），Builder 实施中**；Reviewer 将在批次验收时一并复核 v2 提案与实施产物
 
 ## 冲突裁决
 

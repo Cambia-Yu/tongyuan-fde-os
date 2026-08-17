@@ -115,3 +115,9 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 1. 任何规则升级为 FACT/OBSERVATION 前，其证据行必须全部 ≥ 🟡 且至少一条 ✅ 的 L1/L2；
 2. 🔴 条目只能出现在 Hypothesis 的「验证途径」栏；
 3. 每次定向研究（Phase 5）结束，新增/更新条目须更新 Last Verified 并在对应 RN 中登记。
+
+**EV-EXT-008** ✅（2026-08-18 本地核验，Issue #4 指定锚点）｜GOV.UK + NIST｜部署后状态与监测的 L1 模式锚点｜
+① **GOV.UK 服务手册**（L1 官方）：alpha=探索方案；beta=「take your best idea from alpha and start building it for real」——私测先邀**少量真实用户**→过评估→公测→live；beta 期即开始采集成功数据并迭代，live 延续——支撑「受控上线→真实使用→现场验证」状态分离（gov.uk/service-manual/agile-delivery/how-the-beta-phase-works，核验 2026-08-18）；
+② **NIST AI 800-4《Challenges to the Monitoring of Deployed AI Systems》2026-03-09**（L1 官方）：基于三场 2025 CAISI 从业者工作坊+文献综述；部署后监测横跨功能/运行/人因/安全/合规/大规模影响六类；「post-deployment monitoring – from incident monitoring to field studies – is a crucial practice for confident, wide-spread AI adoption」；明确缺口：「Insufficient research on human-AI feedback loops」「Immature information sharing ecosystem」——支撑使用轨迹采集与反馈路由必要性（nist.gov，核验 2026-08-18）；
+③ OpenAI Cookbook 评测驱动构造（receipt_inspection，复核方提供 URL）：本方两次抓取 403/不可达——**待补验，不支撑任何主张**。
+｜支撑：DEL-011、TOOL-007、DEC-2026-015（仅总体模式；通元落位=DESIGN DECISION）｜—｜High（①②原文在手）｜2026-08-18
