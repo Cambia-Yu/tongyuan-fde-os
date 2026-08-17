@@ -1,8 +1,8 @@
 ---
 id: FDE-OS-IA
 type: architecture
-version: 0.1
-updated: 2026-08-16
+version: 0.1.1
+updated: 2026-08-18
 status: draft
 ---
 
@@ -135,7 +135,7 @@ L1 官方/原始 → L2 一手从业者 → L3 高质量二次解释 → L4 我�
 
 Gate 候选（任务书 §34）：GATE-0 值不值得做 / GATE-1 问题定义明确 / GATE-2 基线存在 / GATE-3 AI 就绪 / GATE-4 MVP 证明价值 / GATE-5 Eval 达标 / GATE-6 生产风险可接受 / GATE-7 值得 Scale。放行结果沿用手册规范六态：通过/有条件通过/退回补充/缩小范围/暂停/终止。跳 Gate 必须书面解释并留 DEC。
 
-**L0-L5 与 GATE 的关系（2026-08-18，R-4 裁决）**：两套体系正交——L0-L5 是证据准入层级（当前证据最多允许进入哪级工作），GATE 是阶段放行判断；多对多映射（L2↔GATE-1/2 区间、L3↔GATE-3/4、L4↔GATE-5/6、L5↔GATE-6/7；L1 与 GATE-7 无对应），禁止一一配对。详见 `03_Delivery_Playbook/链路对齐总表_v0.1.md` §4 R-4。
+**L0-L5 与 GATE 的关系（2026-08-18，R-4 候选映射/设计决定，DEC-2026-013）**：两套体系正交——L0-L5 是证据准入层级（当前证据最多允许进入哪级工作），GATE 是阶段放行判断；多对多映射（L2↔GATE-1/2 区间、L3↔GATE-3/4、L4↔GATE-5/6、L5↔GATE-6/7；L1 与 GATE-7 无对应），禁止一一配对。**该映射为候选性质，待真实 Gate 运行验证**（GATE-0~7 全部未执行过）。详见 `03_Delivery_Playbook/链路对齐总表_v0.1.md` §4 R-4。
 
 每个 Playbook 阶段必须五件套（硬要求，任务书 §33）：Purpose / Entry Criteria / Actions / Exit Criteria / Artifacts（对接手册规范 §8 的十四节单章结构——五件套是其最小公约数）。
 

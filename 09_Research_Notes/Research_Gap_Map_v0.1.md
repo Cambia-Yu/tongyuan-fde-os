@@ -16,7 +16,7 @@ legend: 现有证据强度（High/Med/Low/None）× 对 FDE OS 的重要性（Hi
 | G-02 | 瓴羊一手材料（E248） | **高（2026-08-17 转写到手并全读核验，DEC-2026-012）**：六项主张全部验证+时间戳，另收获三支柱/商业模式/中国差异/成本自曝等 15 组；余项=原始音频比对 | High | ✅ 基本关闭 | ORG-004、H-2/H-7/H-8/H-9 |
 | G-03 | Baseline & Benchmark 阶段方法 | **中（2026-08-17）**：TOOL-004/005 草案+跨组织方法证据+瓴羊样本；独立审核发现 Human Benchmark 与 Golden Set 仍需拆分、部分硬规则需降级 | High | Batch 2 返工后转现场验证 | DEL-008、GATE-2 |
 | G-04 | Work Trace / 行为取证方法论 | **中（2026-08-17）**：TOOL-006 草案+任务挖掘侧证+瓴羊投手 90 天真实行为样本；独立审核要求补状态变化/耗时字段并放松样本硬阈值 | High | Batch 2 返工后转现场采集试点 | DEL-009、H-7 |
-| G-05 | 客户采用/业务结果阶段的链路位置 | **高（2026-08-18 Batch 3 完成）**：四方对齐总表+四裁决（R-3=并入阶段08 Exit+GATE-7 证据输入；C 类备选触发条件已登记未执行） | Med | ✅ 关闭（B 类裁决交付） | DEL 链路重检，见 `03_Delivery_Playbook/链路对齐总表_v0.1.md` |
+| G-05 | 客户采用/业务结果阶段的链路位置 | **高（2026-08-18 Batch 3 Builder 自评完成）**：四方对齐总表+四候选裁决（R-3=并入阶段08 Exit+GATE-7 证据输入；C 类备选触发条件登记未执行）｜**状态以 Reviewer 最终验收为准，PASS 前本行不代表已关闭** | Med | 返工已提交，待复核 | DEL 链路重检，见 `03_Delivery_Playbook/链路对齐总表_v0.1.md` |
 | G-06 | Deployment Leverage 与四健康指标 | **中（2026-08-17）**：Palantir 单组织实证（毛利 80% vs 32%、两指标）已取得，跨组织仍缺 | High | P1（跨组织验证） | COM-004、H-4 |
 | G-07 | Land & Expand vs Value Depth（事实/假设分界） | Low | Med-High | P1 | COM-002、H-5 |
 | G-08 | Value Unit vs Pricing Mechanism 各公司实证 | **中低（2026-08-17）**：瓴羊 E248 已取得坐席/成本替代与效果分成两类样本；Palantir/其他组织与行业级归纳仍缺 | High | P1（跨组织验证） | COM-003、H-6 |
