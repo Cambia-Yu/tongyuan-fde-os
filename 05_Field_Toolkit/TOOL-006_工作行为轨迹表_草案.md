@@ -3,10 +3,10 @@ id: TOOL-006
 type: toolkit-draft
 中文名: 工作行为轨迹表（Work Trace Sheet）
 适用阶段: "阶段03｜L2 诊断验证（现场调查）"
-version: 0.2（草案，按 RN-20260817-004 P0-3 返工：补耗时与动作结果字段；首日/3 笔两条硬规则降为情境化）
+version: 0.2.1（0.2 基础上按二次验收修正 Anthropic 引用归属：轨迹/状态双记录为方法类比迁移 DESIGN INFERENCE）
 updated: 2026-08-17
 status: 草拟（未盲测、未现场验证）
-依据: RN-20260817-002/004；EV-EXT-006/007（Microsoft 官方 Task Mining：理解员工实际桌面操作、识别常见交互与不必要动作；Anthropic agent eval：trajectory=含工具调用、状态变化与中间结果的全过程记录）；EV-EXT-001；手册规范 §8.7；瓴羊印证 EV-LY-001③投手 90 天行为数据化+[25:59]
+依据: RN-20260817-002/004；EV-EXT-006/007（Microsoft 官方 Task Mining：理解员工实际桌面操作、识别常见交互与不必要动作；Anthropic eval 区分 trajectory〔trial 完整记录：outputs/tool calls/reasoning/中间结果/交互〕与 outcome〔环境最终状态〕——本表同时记录动作轨迹与 state after，系对该区分的**方法类比迁移（DESIGN INFERENCE）**，非 Anthropic 直接给出的人类轨迹方法）；EV-EXT-001；手册规范 §8.7；瓴羊印证 EV-LY-001③投手 90 天行为数据化+[25:59]
 ---
 
 # TOOL-006｜工作行为轨迹表（Work Trace Sheet）草案 v0.2
