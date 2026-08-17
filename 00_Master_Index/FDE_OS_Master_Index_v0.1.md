@@ -47,8 +47,8 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | DEL-005 | 指标表述纪律 | 基线确认前，准确率/覆盖率/工时/ROI 只能作评估指标不得作效果承诺 | Evidence-backed | OBSERVATION | O-5/R-C04 | High |
 | DEL-006 | 高风险人工放行 | 高风险经营动作首期由 AI 组织证据与建议，放行权留原责任角色 | Designed | DESIGN DECISION（强制规则候选） | O-2 四例 | High |
 | DEL-007 | 原系统默认保留 | 已有 ERP/WMS/CRM 首期不重建；接入优先级：接口→只读→文件→桌面自动化→局部工作台→局部重构 | Designed | DESIGN DECISION | O-3 三例；EV-TY-006 §3.2 | High |
-| DEL-008 | Baseline 阶段方法 | 缺位：仅有 L2 准入检查项，无阶段级方法 | Draft | — | G-03 | — |
-| DEL-009 | Work Trace 方法 | 缺位：方向已立（H-7），无作业设计 | Draft | — | G-04 | — |
+| DEL-008 | Baseline 阶段方法 | 方法草案已建（TOOL-004 基线记录表）：AI 介入前测四维基线（成本/时长/质量/量），先定口径后填数，单次记录不构成基线；服务 GATE-2 与 R-C04 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-004（跨组织 L2/L3）；内部反例=结算协同单样本 | Medium |
+| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 工作行为轨迹表）：真实人员处理真实 Case 的行为序列采集；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-006（任务挖掘侧证）+ EV-EXT-001（按时间占比）；H-7 仍待瓴羊样本 | Medium |
 | DEL-010 | 客户采用/ROI 阶段 | 手册第 7 章有、十阶段链缺位——链路重检时裁决 | Draft | — | G-05 | — |
 
 ## 04 Commercial Engine
@@ -70,7 +70,10 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | TOOL-001 =〔作业-准入-01〕 | 客户初步调查表（9+14+12+8+12+字段组，五选一结论） | Draft V0.1（含完整示例） | ForFlow 作业包 |
 | TOOL-002 =〔作业-场景-01〕 | 候选场景比较与直接否决表（两关+场景卡+12 维比较+AI 必要性检查） | Draft V0.1（含示例） | ForFlow 作业包 |
 | TOOL-003 =〔作业-准入-02〕 | 项目准入审查表（L0-L5 逐级审查+三层记录） | Draft V0.1（含示例） | ForFlow 作业包 |
-| TOOL-004~020 | Qualification Sheet 之外的 17 项（任务书 §20 清单：Stakeholder Map、Work Trace、Baseline Sheet、Golden Case、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
+| TOOL-004 | 基线记录表（Baseline Sheet） | Draft V0.1（2026-08-17，含 Hold 条件；dry run=网络货运纸面推演通过） | `05_Field_Toolkit/TOOL-004_基线记录表_草案.md` |
+| TOOL-005 | 人工参照系记录表（Human Benchmark / Golden Case Sheet） | Draft V0.1（2026-08-17，含 IAA 分工处理与仲裁流程） | `05_Field_Toolkit/TOOL-005_人工参照系记录表_草案.md` |
+| TOOL-006 | 工作行为轨迹表（Work Trace Sheet） | Draft V0.1（2026-08-17，含动作三分类与观察纪律） | `05_Field_Toolkit/TOOL-006_工作行为轨迹表_草案.md` |
+| TOOL-007~020 | 其余待建项（Stakeholder Map、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
 
 ## 附：编号映射表（手册体系 ↔ OS 体系）
 

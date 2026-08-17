@@ -61,6 +61,12 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 
 **EV-EXT-003** ✅（隔离）｜湖南「智赋万企」报告｜同名异义样本｜Field Driven Engineering（共享驻场）≠ Forward Deployed Engineer；含 O-FDE 组织适配模型与 S.T.E.P. 四阶段｜第三方报告｜L3｜`ZCodeProject/FDE模式AI转型可行性分析.md`（Scribd 来源）｜2026-07-22｜仅作中国腰部企业落地约束的外部视角；DEC-2026-004 隔离｜无｜—｜Low-Medium｜2026-08-16
 
+**EV-EXT-004** 🟡｜跨组织（企业 AI 实践）｜基线方法｜AI 介入前先取四维基线（成本/时长/质量/量）；基线必须先于项目设立，「上线后发明指标」是常见失败模式；启动前指定单一具名业务指标、预设成功窗口｜从业者方法文章（多源一致）+ 学术侧证｜L2/L3（方法层 OBSERVATION）｜agility-at-scale.com《Generative AI Pilot Metrics》、classicinformatics 企业 AI 指南、arXiv 2512.04123《Measuring Agents in Production》（306 从业者+20 案例）｜抓取 2026-08-17｜支撑 TOOL-004 与 DEL-008｜—｜Medium-High｜2026-08-17
+
+**EV-EXT-005** 🟡｜跨组织（LLM 评测实践）｜人工参照系/Golden Case 方法｜试标注轮校准；机会校正一致率（κ/Fleiss，原始一致率在不平衡数据上误导）；目标 IAA≥0.8（行业惯例非硬规则）；分歧=判据含糊的诊断信号；第三人仲裁；数据集小而多样｜评测工程文章（多源一致）+ 学术｜L2/L3（方法学 FACT，阈值 OBSERVATION）｜booking.ai《LLM Evaluation: Practical Tips at Booking.com》、getmaxim.ai、arize.com、galtea.ai、arXiv 2506.13023｜抓取 2026-08-17｜支撑 TOOL-005；「最厉害员工≠Ground Truth」获得方法学支撑｜—｜Medium-High｜2026-08-17
+
+**EV-EXT-006** 🟡｜跨组织（流程/任务挖掘）｜Work Trace 方法侧证｜流程挖掘=系统事件日志（端到端）；任务挖掘=用户级交互数据，暴露系统事件**之间**的变通动作/手工返工/影子表格——观察数据须区分业务规则与系统摩擦｜厂商方法文档（多源一致：Signavio/Appian/UiPath/Paxray/ABBYY）｜L2/L3（方法层 OBSERVATION）｜signavio.com/wiki/process-discovery/process-mining-vs-task-mining 等｜抓取 2026-08-17｜支撑 TOOL-006 与 DEL-009；反向发现：影子表格可能承载未成文业务规则，不能一律判为摩擦｜—｜Medium｜2026-08-17
+
 ## D 组｜待获取与已补证（Palantir 批次已核验，2026-08-17，见 RN-20260817-001）
 
 **EV-PAL-001** ✅｜Palantir｜Delta 官方定义 / Edge→Core 机制｜① Delta=Forward Deployed Software Engineer 官方代称（源自 NATO 字母表），与 Dev 分属 Business Development / Product Development 事业部；② Dev=「one capability, many customers」，Delta=「one customer, many capabilities」；③ Delta 常向核心产品回交代码，大功能须对照产品 roadmap 验证并入、由产品团队 review；④ 官方明确 Delta≠咨询顾问（部署既有产品、建长期方案）｜官方博客｜L1｜《Dev versus Delta: Demystifying engineering roles at Palantir》2019-04-08，blog.palantir.com/dev-versus-delta-demystifying-engineering-roles-at-palantir-ad44c2a6e87｜抓取 2026-08-17｜官方机制证据：Delta 代码回流 Core 的协调与评审流程｜ORG-002/003、DOC-007｜—｜High｜2026-08-17
