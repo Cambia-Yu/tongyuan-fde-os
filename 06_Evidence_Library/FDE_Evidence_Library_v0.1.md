@@ -18,8 +18,9 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 
 **EV-OAI-001** ✅｜OpenAI｜FDE 定义｜FDE 岗位连续承担发现、技术范围、系统设计、建设和生产发布，以生产采用与评测反馈衡量成功｜官方岗位说明｜L1｜ForFlow 台账 PUB-01（原文 URL 待补档）｜—｜「FDE 不是驻场程序员/售前/PM」的官方对照｜DOC-001｜未见｜High｜2026-07-23（台账登记日）
 
-**EV-OAI-002** 🟡｜OpenAI｜Deployment Company｜FDE 需将模型连接到客户数据、工具、控制与业务流程，完成设计-建设-测试-部署｜官方页｜L1（待抓原文）｜`openai.com/index/openai-launches-the-deployment-company/`（任务书 §12 给出）｜2026｜—｜DOC-001/ORG 前提｜—｜Medium-High｜未核验
-→ 待办：抓取原文并存档摘录；确认「收购 Tomoro 后组织变化」是否官方披露。
+**EV-OAI-002** ✅（2026-08-18 本地核验）｜OpenAI｜部署公司官方发布｜① DeployCo 成立，OpenAI 多数持股/控制；② TPG 领投 19 家机构投资 40 亿美元以上（含 Bain/Capgemini/麦肯锡）；③ **已同意收购 Tomoro，惯常交割条件含监管批准，预计未来数月完成——收购未交割**；④ Tomoro 约 150 名 FDE/部署专家「自第一天起」加入；⑤ 角色双轨=FDE+Deployment Specialist；⑥ 参与模式=聚焦诊断→少数优先工作流→FDE 进场设计-建设-测试-部署；⑦ Tomoro 此前工作=Tesco/Virgin Atlantic/Supercell（官方转述其「mission-critical workflows」）｜官方发布｜L1｜《OpenAI launches the OpenAI Deployment Company…》页面自标 2026-08-06，openai.com/index/openai-launches-the-deployment-company/｜抓取 2026-08-18｜ORG/DOC 设计依据；⚠️ 与 Issue #3 范围审查引用的「2026-05-11」日期不一致，登记差异待复核方说明（或存在另一份更早公告）｜—｜High（原文在手）｜2026-08-18
+
+**EV-OAI-003** ✅（2026-08-18 本地核验）｜OpenAI 部署公司官网 deploy.co｜① 「Instead of starting with a general product, FDE teams work directly with customers to solve a specific problem」；② **「This cycle—build, prove, generalize—connects deployment to product development」（建设-证明-泛化周期，任务书 §12 三段表述的官方出处）**，连接 Agent SDK/AI 辅助创作/模型基准工具；③ 案例（官方自述，无第三方核验）：BBVA 12 万员工/25 国；John Deere 减药 70%、客户互动 6 倍、自建评测系统测准确率；④ 页面无日期（仅 ©2026）｜官方官网｜L1（事实）/自述案例=L2 营销自述｜deploy.co，抓取 2026-08-18｜**tomoro.ai 已 301 重定向至 deploy.co**（交割进程迹象，非完成证据）；「12 周生产」主张无页面可核、未采信｜ORG-003 接口参照；DOC/COM｜—｜High（原文在手）/Medium（案例）｜2026-08-18
 
 **EV-ANT-001** ✅｜Anthropic｜工作流 vs Agent｜预先定义路径的工作流与模型动态决策的 Agent 应区分，按需逐步升复杂度｜官方工程博客｜L1｜台账 PUB-04｜—｜—｜DOC-007/DEL 复杂度阶梯｜—｜High｜2026-07-23
 
@@ -105,7 +106,7 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 
 **EV-POD-001** 🟡（转写已取得 2026-08-17，内容等级不变）｜小宇宙 episode `68c6eb41`《极客飞行日志》｜Bob McGrew/Palantir FDE 二次解读｜**Source metadata**：发布 2025-09-14｜时长 32 分钟（转写头部自证）｜来源：`09_Research_Notes/Source_Materials/FDE_Palantir_Bob_McGrew_二次解读_32分钟.md`（ChatGPT 推送入仓）｜双主持对谈体、AI 生成内容（页面声明）；头部与抽样核验：内容与 EV-PAL-003（Lightcone）一致（YC 招聘板 100+ FDE 职位、Bob McGrew 视角等）；ASR 错字（Baumgartner/Bom McRae=Bob McGrew）｜等级维持：L3（记录）、L4（内容），只作结构线索，不独立支撑主张｜—｜—｜Low｜2026-08-17 更新
 
-**EV-TOM-001** 🔴｜Tomoro｜Field Deployment 模型、John Deere 案例、Evaluation 方法｜目标 L1-L2｜`tomoro.ai`（未抓取）+ OpenAI 收购后变化（并入 EV-OAI-002 待办）｜2026-08-16 登记
+**EV-TOM-001** 🟡（2026-08-18 升级登记，按 Issue #3 边界 2 时间切片）｜Tomoro（收购前独立样本）｜① 官网 tomoro.ai **已 301 重定向至 deploy.co**，原官网内容不可独立回溯；② 可核内容仅存：OpenAI 官方页转述（约 150 名 FDE/部署专家；此前工作 Tesco/Virgin Atlantic/Supercell，EV-OAI-002⑦）+ deploy.co 的 John Deere 案例（已并入 EV-OAI-003，属 DeployCo 叙述）；③ **「12 周生产」等原流传主张无页面可核，未采信**｜官方残迹+他方转述｜原官网不可得=证据等级封顶 L2（他方转述）｜重定向实测 2026-08-18｜仅作收购前独立组织样本计票，收购后结构不作独立第四票；后续以第三方存档（Wayback 等）补原官网快照｜ORG 交集分析第 4 票（受限）｜—｜Low-Medium｜2026-08-18
 
 ---
 

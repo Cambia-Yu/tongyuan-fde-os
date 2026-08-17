@@ -28,12 +28,12 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 
 | Rule | 主题 | 当前规则 | 状态 | 知识状态 | 证据 | 置信 |
 |---|---|---|---|---|---|---|
-| ORG-001 | Echo-like 角色 | 假设：业务架构/问题发现/客户关系/业务结果归口；Palantir 参照=Echo/嵌入式分析师（画像：领域专家+异见者，看到 3x-10x 改进；官方对应岗为 Deployment Strategist） | Researching | HYPOTHESIS（通元问科）/ Palantir 事实（L2 口述） | EV-PAL-003；官方岗参照 EV-PAL-001 注 | Low-Medium |
-| ORG-002 | Delta-like 角色 | 假设：系统转化/数据连接/Agent/Eval/Production；Palantir 参照=Delta（FDSWE，官方术语；「one customer, many capabilities」，非咨询） | Researching | HYPOTHESIS（通元问科）/ Palantir 事实（L1+L2） | EV-PAL-001/003 | Low-Medium |
-| ORG-003 | Core 公共能力层 | 假设：沉淀 Skill/Connector/Eval/Workflow/Runtime/模板；泛化机制 Palantir 参照已核验（Delta 回交代码→产品团队 roadmap 验证+review；PD 专职泛化；多客户 FDE 共同设计；Ontology 防碎片），通元问科版未设计 | Researching | HYPOTHESIS（通元问科）/ 泛化机制为 Palantir 事实（L1+L2） | EV-PAL-001/002/003；G-09 剩余：防污染判据 | Medium |
-| ORG-004 | Client Coach | 假设：从客户内部选优秀业务专家参与 Golden Case/调教/验收；**瓴羊一手定义已取得**（三角色之三：首席客服/首席销冠组成 AI 教练团，「我们的角色会退后」，EV-LY-001⑤）；本土雏形=协会「年轻骨干」机制 | Researching | HYPOTHESIS（通元问科适配）/ 瓴羊事实（L3） | EV-LY-001 [42:54-44:47]；EV-TY-009 | Medium |
-| ORG-005 | 一人多角色边界 | Unknown：现阶段谁可兼任、何时必须分设 | Draft | Unknown | 待设计 | — |
-| ORG-006 | Delta 外包风险 | Unknown：外包后如何不退化为「需求定义+软件外包」 | Draft | Unknown | 待设计 | — |
+| ORG-001 | 业务问题负责人（原 Echo-like 条目） | 候选设计：问题定义/核心指标与基线口径/客户关系/业务结果归口/放行建议方；进入退出量化条件 Unknown | Designed（候选，未现场验证） | DESIGN DECISION；依据=业务侧角色交集（3/4 组织）+ 三层分离制度 | EV-PAL-003（Echo 口述）；EV-OAI-002⑤；EV-LY-001 BA；组织协作与责任机制 v0.1 角色 A | Medium |
+| ORG-002 | 技术交付负责人（原 Delta-like 条目） | 候选设计：系统转化/数据连接/评测/受控部署/生产接入/上浮提交发起方；进入退出量化条件 Unknown | Designed（候选，未现场验证） | DESIGN DECISION；依据=最强交集（驻场工程 4/4）+ 手册第 4-6 章 | EV-PAL-001/003；EV-OAI-002/003；EV-LY-001；角色 B | Medium-High |
+| ORG-003 | 公共能力维护方（Core） | 候选设计：资产索引维护+上浮评审合并权；**最小接口**=提交（技术交付负责人）→评审（维护方+原项目技术交付负责人）→批准/拒绝（维护方单方，理由登记）；泛化阈值/防污染判据 Unknown（G-09 不因本批关闭） | Designed（候选，仅最小接口） | DESIGN DECISION；依据=回流机制交集（3/4，形态各异） | EV-PAL-001/002（L1+L2）；EV-OAI-003（build-prove-generalize）；EV-LY-001④（4+X）；角色 C | Medium |
+| ORG-004 | 客户业务教练（原 Client Coach 条目） | 候选设计：客户内部遴选（业务负责人提名）；参与黄金集判定/仲裁/调教/验收/停止信号；合同机制仅定参与-确认-停止-验收四项责任，价格法律留商业批次 | Designed（候选，未现场验证） | DESIGN DECISION；**2/4 组织不入交集，作参照**（瓴羊一手+本土雏形） | EV-LY-001⑤；EV-TY-009；角色 D | Medium-Low |
+| ORG-005 | 一人多角色边界 | 候选（定性条件版）：A/B 可兼任当且仅当串行阶段+建议与批准分离+不同时为被验收方与验收方；分设信号=生产期/≥2 活跃项目/客户要求独立复核；**量化阈值 Unknown** | Designed（候选，仅定性条件） | DESIGN DECISION（三层分离制度的直接推论） | 三层分离（回放修订 4）；组织协作与责任机制 v0.1 §4 | Medium |
+| ORG-006 | 技术交付外包边界 | 候选（防线清单版）：外包可行性本体 Unknown；若发生，信用归因权五位置不可外包（问题定义者/指标共定者/评审主持者/复盘作者/高层关系），违反任一项触发 Change Proposal 重审 | Designed（候选，仅防线） | DESIGN DECISION | EV-TY-008（L4 内部研究）；组织协作与责任机制 v0.1 §5 | Medium-Low |
 | ORG-007 | 手册编写角色制 | 主编/章节负责人/项目证据负责人/技术复核/业务复核/陌生测试者六角色 | Designed | DESIGN DECISION | EV-TY-006 §18 | High |
 
 ## 03 Delivery Playbook
