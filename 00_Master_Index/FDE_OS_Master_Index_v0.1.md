@@ -49,6 +49,8 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | DEL-007 | 原系统默认保留 | 已有 ERP/WMS/CRM 首期不重建；接入优先级：接口→只读→文件→桌面自动化→局部工作台→局部重构 | Designed | DESIGN DECISION | O-3 三例；EV-TY-006 §3.2 | High |
 | DEL-008 | Baseline 阶段方法 | 方法草案已建（TOOL-004 v0.2）：先定**核心业务指标**（公式+统计单元），成本/时长/质量/量为**默认检查框架**按需取舍，先定口径后填数，单次记录不构成基线；服务 GATE-2 与 R-C04 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-004 + EV-EXT-007（L1 锚点）；内部反例=结算协同单样本 | Medium |
 | DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 v0.2.1）：真实人员处理真实 Case 的行为序列采集（八要素含耗时与动作结果/状态变化）；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；样本以**轨迹饱和+关键异常覆盖**为准（3-5 笔仅为初始 discovery 最低样本）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-007 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
+| DEL-012 | 评测方法（G-12） | 设计决定（候选）：评测四对象分立（人工参照系/黄金集=输入，能力评测集/回归集=本规则产出，含毕业机制）；评分器三型选型与人工校准；多次试验；错误分类接反馈路由；生产案例四步防污染+归属三选一；项目阈值须批准记录（无通用样本量/通过线；Anthropic 20-50=早期实践参照）｜服务 GATE-5，只判达标不判生产风险 | Designed（候选，未现场验证） | DESIGN DECISION（方法锚点=EV-ANT-003 L1） | EV-ANT-003；EV-EXT-007；TOOL-008 | Medium-High |
+| DEL-013 | 受控部署与回滚（G-11） | 设计决定（候选）：四种运行方式=**可选控制模式非升级阶梯**（影子/辅助/守卫/全自动；每模式四要素：权限边界/批准与暂停停止/进入证据与监测/退出降级触发；高风险放行权不因模式转移）；回滚十要素（触发/范围/停止授权/降级/接管/结果隔离/数据保全/通知/恢复验证/重新上线）｜服务 GATE-6，只判风险不构成部署认证，≠U4/U5 | Designed（候选，未现场验证） | DESIGN DECISION（控制类别锚点=NIST AI RMF Manage 4.1-4.3 L1；瓴羊灰度=单组织参照） | EV-NIST-002；EV-LY-001⑦；EV-EXT-008；TOOL-009 | Medium |
 | DEL-011 | 使用轨迹与反馈路由 | 设计决定（候选）：五级使用状态 U1-U5（一次轨迹≠使用率、一次使用≠现场验证、GATE-6≠部署认证）；真实交付入口统一定义（不限 URL）；条件式反馈路由（使用证据四步入评测集、评测失败按根因分流、重复模式仅触发上浮候选评审、使用证据进六态产品决定）；观测物=TOOL-007 | Designed（候选，未现场验证） | DESIGN DECISION（GOV.UK beta/live 与 NIST AI 800-4 支撑总体模式，EV-EXT-008） | EV-EXT-008；EV-LY-001③；EV-PAL-002；TOOL-007 | Medium |
 | DEL-010 | 客户采用/ROI 阶段 | 已裁决（2026-08-18，DEC-2026-013/R-3，候选落位）：并入阶段 08 的 Exit 必查维度（实际使用率/业务结果对照基线/ROI 口径）+ GATE-7 证据输入；不设独立阶段；C 类备选（07a 采用确认）触发条件已登记 | Designed（候选落位，未现场验证） | DESIGN DECISION | 官网5；EV-LY-001 [18:11]；手册第 7 章 | Medium |
 
@@ -75,7 +77,9 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | TOOL-005 | 人工参照系与黄金集记录表（Human Benchmark & Golden Set Sheet） | Draft V0.2（2026-08-17 返工后：A 人工参照系/B 黄金集两节拆分） | `05_Field_Toolkit/TOOL-005_人工参照系记录表_草案.md` |
 | TOOL-006 | 工作行为轨迹表（Work Trace Sheet） | Draft V0.2.1（2026-08-17 返工后：八要素+饱和判据；Anthropic 引用归属已按原文收敛） | `05_Field_Toolkit/TOOL-006_工作行为轨迹表_草案.md` |
 | TOOL-007 | 使用轨迹表（Usage Trace Sheet） | Draft V0.1（2026-08-18，Issue #4 获批设计；与 TOOL-006 语义独立；含数据边界与三铁律） | `05_Field_Toolkit/TOOL-007_使用轨迹表_草案.md` |
-| TOOL-008~020 | 其余待建项（Stakeholder Map、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
+| TOOL-008 | 评测集构建与回归表（Eval Suite Sheet） | Draft V0.1（2026-08-18；四对象分立+防污染+阈值批准制） | `05_Field_Toolkit/TOOL-008_评测集构建与回归表_草案.md` |
+| TOOL-009 | 受控部署记录表（Controlled Deployment Sheet） | Draft V0.1（2026-08-18；四模式四要素+回滚十要素） | `05_Field_Toolkit/TOOL-009_受控部署记录表_草案.md` |
+| TOOL-010~020 | 其余待建项（Stakeholder Map、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
 
 ## 附：编号映射表（手册体系 ↔ OS 体系）
 
