@@ -13,9 +13,8 @@
 
 ## 当前批次
 
-- Issue #1：`Batch 2｜Baseline / Human Benchmark / Work Trace`
-- 状态：**部分通过，返工后复核**
-- 审核依据：`09_Research_Notes/RN-20260817-004-chatgpt-batch2-audit.md`
+- Issue #2：`Batch 3｜交付链路重检（G-05）` —— **Reviewer 最终验收 PASS，已关闭**（2026-08-17T16:53Z）
+- 下一批：Issue #3 `Batch 4｜Operating Model：通元问科组织设计（候选）` —— **已由 Builder 起草，待 Reviewer 范围审查**
 
 ## 冲突裁决
 

@@ -48,7 +48,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | DEL-006 | 高风险人工放行 | 高风险经营动作首期由 AI 组织证据与建议，放行权留原责任角色 | Designed | DESIGN DECISION（强制规则候选） | O-2 四例 | High |
 | DEL-007 | 原系统默认保留 | 已有 ERP/WMS/CRM 首期不重建；接入优先级：接口→只读→文件→桌面自动化→局部工作台→局部重构 | Designed | DESIGN DECISION | O-3 三例；EV-TY-006 §3.2 | High |
 | DEL-008 | Baseline 阶段方法 | 方法草案已建（TOOL-004 v0.2）：先定**核心业务指标**（公式+统计单元），成本/时长/质量/量为**默认检查框架**按需取舍，先定口径后填数，单次记录不构成基线；服务 GATE-2 与 R-C04 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-004 + EV-EXT-007（L1 锚点）；内部反例=结算协同单样本 | Medium |
-| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 v0.2）：真实人员处理真实 Case 的行为序列采集（八要素含耗时与动作结果/状态变化）；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；样本以**轨迹饱和+关键异常覆盖**为准（3-5 笔仅为初始 discovery 最低样本）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-007 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
+| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 v0.2.1）：真实人员处理真实 Case 的行为序列采集（八要素含耗时与动作结果/状态变化）；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；样本以**轨迹饱和+关键异常覆盖**为准（3-5 笔仅为初始 discovery 最低样本）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-007 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
 | DEL-010 | 客户采用/ROI 阶段 | 已裁决（2026-08-18，DEC-2026-013/R-3，候选落位）：并入阶段 08 的 Exit 必查维度（实际使用率/业务结果对照基线/ROI 口径）+ GATE-7 证据输入；不设独立阶段；C 类备选（07a 采用确认）触发条件已登记 | Designed（候选落位，未现场验证） | DESIGN DECISION | 官网5；EV-LY-001 [18:11]；手册第 7 章 | Medium |
 
 ## 04 Commercial Engine
@@ -70,9 +70,9 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | TOOL-001 =〔作业-准入-01〕 | 客户初步调查表（9+14+12+8+12+字段组，五选一结论） | Draft V0.1（含完整示例） | ForFlow 作业包 |
 | TOOL-002 =〔作业-场景-01〕 | 候选场景比较与直接否决表（两关+场景卡+12 维比较+AI 必要性检查） | Draft V0.1（含示例） | ForFlow 作业包 |
 | TOOL-003 =〔作业-准入-02〕 | 项目准入审查表（L0-L5 逐级审查+三层记录） | Draft V0.1（含示例） | ForFlow 作业包 |
-| TOOL-004 | 基线记录表（Baseline Sheet） | Draft V0.1（2026-08-17，含 Hold 条件；dry run=网络货运纸面推演通过） | `05_Field_Toolkit/TOOL-004_基线记录表_草案.md` |
-| TOOL-005 | 人工参照系记录表（Human Benchmark / Golden Case Sheet） | Draft V0.1（2026-08-17，含 IAA 分工处理与仲裁流程） | `05_Field_Toolkit/TOOL-005_人工参照系记录表_草案.md` |
-| TOOL-006 | 工作行为轨迹表（Work Trace Sheet） | Draft V0.1（2026-08-17，含动作三分类与观察纪律） | `05_Field_Toolkit/TOOL-006_工作行为轨迹表_草案.md` |
+| TOOL-004 | 基线记录表（Baseline Sheet） | Draft V0.2（2026-08-17 返工后：核心业务指标优先、四维为默认框架；dry run=网络货运纸面推演通过） | `05_Field_Toolkit/TOOL-004_基线记录表_草案.md` |
+| TOOL-005 | 人工参照系与黄金集记录表（Human Benchmark & Golden Set Sheet） | Draft V0.2（2026-08-17 返工后：A 人工参照系/B 黄金集两节拆分） | `05_Field_Toolkit/TOOL-005_人工参照系记录表_草案.md` |
+| TOOL-006 | 工作行为轨迹表（Work Trace Sheet） | Draft V0.2.1（2026-08-17 返工后：八要素+饱和判据；Anthropic 引用归属已按原文收敛） | `05_Field_Toolkit/TOOL-006_工作行为轨迹表_草案.md` |
 | TOOL-007~020 | 其余待建项（Stakeholder Map、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
 
 ## 附：编号映射表（手册体系 ↔ OS 体系）
