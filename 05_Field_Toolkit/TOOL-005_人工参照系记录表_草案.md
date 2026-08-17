@@ -6,7 +6,7 @@ type: toolkit-draft
 version: 0.1（草案）
 updated: 2026-08-17
 status: 草拟（未盲测、未现场验证）
-依据: RN-20260817-002；EV-EXT-005；DEL-006（人工放行）；Eval 阶段输入
+依据: RN-20260817-002；EV-EXT-005；DEL-006（人工放行）；Eval 阶段输入；瓴羊印证 EV-LY-001①[05:37]「以岗位标杆为预设」＋⑤客户内部首席教练制
 ---
 
 # TOOL-005｜人工参照系记录表（Human Benchmark / Golden Case Sheet）草案

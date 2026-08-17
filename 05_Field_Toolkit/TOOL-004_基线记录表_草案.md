@@ -6,7 +6,7 @@ type: toolkit-draft
 version: 0.1（草案）
 updated: 2026-08-17
 status: 草拟（未盲测、未现场验证）
-依据: RN-20260817-002；EV-EXT-004；R-C04；GATE-2
+依据: RN-20260817-002；EV-EXT-004；R-C04；GATE-2；瓴羊印证 EV-LY-001①[05:04]「业务目标+业务数字+业务过往历史记录→构建测评级」
 ---
 
 # TOOL-004｜基线记录表（Baseline Sheet）草案
