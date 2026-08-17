@@ -31,7 +31,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | ORG-001 | Echo-like 角色 | 假设：业务架构/问题发现/客户关系/业务结果归口；Palantir 参照=Echo/嵌入式分析师（画像：领域专家+异见者，看到 3x-10x 改进；官方对应岗为 Deployment Strategist） | Researching | HYPOTHESIS（通元问科）/ Palantir 事实（L2 口述） | EV-PAL-003；官方岗参照 EV-PAL-001 注 | Low-Medium |
 | ORG-002 | Delta-like 角色 | 假设：系统转化/数据连接/Agent/Eval/Production；Palantir 参照=Delta（FDSWE，官方术语；「one customer, many capabilities」，非咨询） | Researching | HYPOTHESIS（通元问科）/ Palantir 事实（L1+L2） | EV-PAL-001/003 | Low-Medium |
 | ORG-003 | Core 公共能力层 | 假设：沉淀 Skill/Connector/Eval/Workflow/Runtime/模板；泛化机制 Palantir 参照已核验（Delta 回交代码→产品团队 roadmap 验证+review；PD 专职泛化；多客户 FDE 共同设计；Ontology 防碎片），通元问科版未设计 | Researching | HYPOTHESIS（通元问科）/ 泛化机制为 Palantir 事实（L1+L2） | EV-PAL-001/002/003；G-09 剩余：防污染判据 | Medium |
-| ORG-004 | Client Coach | 假设：从客户内部选优秀业务专家参与 Golden Case/调教/验收（本土雏形=协会「年轻骨干」机制） | Researching | HYPOTHESIS | EV-TY-009；EV-LY 待补 | Medium-Low |
+| ORG-004 | Client Coach | 假设：从客户内部选优秀业务专家参与 Golden Case/调教/验收；**瓴羊一手定义已取得**（三角色之三：首席客服/首席销冠组成 AI 教练团，「我们的角色会退后」，EV-LY-001⑤）；本土雏形=协会「年轻骨干」机制 | Researching | HYPOTHESIS（通元问科适配）/ 瓴羊事实（L3） | EV-LY-001 [42:54-44:47]；EV-TY-009 | Medium |
 | ORG-005 | 一人多角色边界 | Unknown：现阶段谁可兼任、何时必须分设 | Draft | Unknown | 待设计 | — |
 | ORG-006 | Delta 外包风险 | Unknown：外包后如何不退化为「需求定义+软件外包」 | Draft | Unknown | 待设计 | — |
 | ORG-007 | 手册编写角色制 | 主编/章节负责人/项目证据负责人/技术复核/业务复核/陌生测试者六角色 | Designed | DESIGN DECISION | EV-TY-006 §18 | High |
@@ -48,7 +48,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | DEL-006 | 高风险人工放行 | 高风险经营动作首期由 AI 组织证据与建议，放行权留原责任角色 | Designed | DESIGN DECISION（强制规则候选） | O-2 四例 | High |
 | DEL-007 | 原系统默认保留 | 已有 ERP/WMS/CRM 首期不重建；接入优先级：接口→只读→文件→桌面自动化→局部工作台→局部重构 | Designed | DESIGN DECISION | O-3 三例；EV-TY-006 §3.2 | High |
 | DEL-008 | Baseline 阶段方法 | 方法草案已建（TOOL-004 基线记录表）：AI 介入前测四维基线（成本/时长/质量/量），先定口径后填数，单次记录不构成基线；服务 GATE-2 与 R-C04 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-004（跨组织 L2/L3）；内部反例=结算协同单样本 | Medium |
-| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 工作行为轨迹表）：真实人员处理真实 Case 的行为序列采集；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-006（任务挖掘侧证）+ EV-EXT-001（按时间占比）；H-7 仍待瓴羊样本 | Medium |
+| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 工作行为轨迹表）：真实人员处理真实 Case 的行为序列采集；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
 | DEL-010 | 客户采用/ROI 阶段 | 手册第 7 章有、十阶段链缺位——链路重检时裁决 | Draft | — | G-05 | — |
 
 ## 04 Commercial Engine
@@ -57,7 +57,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 |---|---|---|---|---|---|---|
 | COM-001 | 信用阶梯 | 陌生→入口→关系→判断→交易→交付→Reference→机构（八级）；用可逆承诺改造一次性信任 | Researching | INFERENCE | EV-TY-008 | Medium-High |
 | COM-002 | 首单机制 | 低风险≠免费、付费≠commitment；真正变量是客户承诺向量（预算/sponsor/负责人/数据/用户/节奏/上线资源） | Researching | INFERENCE | EV-EXT-002 | Medium |
-| COM-003 | Value Unit / Pricing | Unknown：各公司实证未取得 | Researching | — | G-08 | — |
+| COM-003 | Value Unit / Pricing | 瓴羊实证已取得：两类——按坐席收费（成本替代 8-9 折同效果）+按效果分成（超出人工基线的增长部分分成，MVP+AB test 结算，连续续费客户真实存在）；与「不卖人天」原则的关系：瓴羊明确拒绝千人天采购（EV-LY-001⑧/嘉宾 [26:40-27:39]） | Researching | 瓴羊事实（L3）；行业级仍 INFERENCE | EV-LY-001；Palantir 定价证据待 G-08 | Medium |
 | COM-004 | 四健康指标 | 假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标；Palantir 版两大内部指标（结果价值/合同规模 + 产品杠杆）与之高度吻合（单组织） | Researching | HYPOTHESIS | EV-PAL-003（McGrew 两指标）；EV-PAL-002（毛利对比） | Low-Medium |
 | COM-005 | 不卖 ROI 保证 | 过程/里程碑保证（gate 未过则停），不承担不可控结果风险 | Designed | DESIGN DECISION | EV-TY-008 L120 | Medium-High |
 | COM-006 | 信用归因权 | 五个必须占住的可见位置（问题定义/指标共定/评审主持/复盘作者/高层关系） | Designed | DESIGN DECISION | EV-TY-008 | Medium |
