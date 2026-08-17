@@ -13,8 +13,8 @@
 
 ## 当前批次
 
-- Issue #2：`Batch 3｜交付链路重检（G-05）` —— **Reviewer 最终验收 PASS，已关闭**（2026-08-17T16:53Z）
-- 下一批：Issue #3 `Batch 4｜Operating Model：通元问科组织设计（候选）` —— **已由 Builder 起草，待 Reviewer 范围审查**
+- Issue #3：`Batch 4｜组织模型（Operating Model，候选设计）` —— **Reviewer 最终验收 PASS，已关闭**（2026-08-17T20:14Z，commit be9aa9f）
+- 下一批：Issue #4 `现场学习闭环｜C 类变更提案 + 双读者手册整合` —— **Builder 起草中/待 Reviewer 审查与用户批准**（C 类：执行前须用户批准）
 
 ## 冲突裁决
 
