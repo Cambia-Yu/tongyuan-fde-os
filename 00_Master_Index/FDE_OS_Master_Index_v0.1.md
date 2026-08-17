@@ -47,8 +47,8 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | DEL-005 | 指标表述纪律 | 基线确认前，准确率/覆盖率/工时/ROI 只能作评估指标不得作效果承诺 | Evidence-backed | OBSERVATION | O-5/R-C04 | High |
 | DEL-006 | 高风险人工放行 | 高风险经营动作首期由 AI 组织证据与建议，放行权留原责任角色 | Designed | DESIGN DECISION（强制规则候选） | O-2 四例 | High |
 | DEL-007 | 原系统默认保留 | 已有 ERP/WMS/CRM 首期不重建；接入优先级：接口→只读→文件→桌面自动化→局部工作台→局部重构 | Designed | DESIGN DECISION | O-3 三例；EV-TY-006 §3.2 | High |
-| DEL-008 | Baseline 阶段方法 | 方法草案已建（TOOL-004 基线记录表）：AI 介入前测四维基线（成本/时长/质量/量），先定口径后填数，单次记录不构成基线；服务 GATE-2 与 R-C04 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-004（跨组织 L2/L3）；内部反例=结算协同单样本 | Medium |
-| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 工作行为轨迹表）：真实人员处理真实 Case 的行为序列采集；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
+| DEL-008 | Baseline 阶段方法 | 方法草案已建（TOOL-004 v0.2）：先定**核心业务指标**（公式+统计单元），成本/时长/质量/量为**默认检查框架**按需取舍，先定口径后填数，单次记录不构成基线；服务 GATE-2 与 R-C04 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信） | EV-EXT-004 + EV-EXT-007（L1 锚点）；内部反例=结算协同单样本 | Medium |
+| DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 v0.2）：真实人员处理真实 Case 的行为序列采集（八要素含耗时与动作结果/状态变化）；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；样本以**轨迹饱和+关键异常覆盖**为准（3-5 笔仅为初始 discovery 最低样本）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-007 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
 | DEL-010 | 客户采用/ROI 阶段 | 手册第 7 章有、十阶段链缺位——链路重检时裁决 | Draft | — | G-05 | — |
 
 ## 04 Commercial Engine

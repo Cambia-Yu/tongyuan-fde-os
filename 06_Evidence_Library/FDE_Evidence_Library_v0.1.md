@@ -61,11 +61,16 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 
 **EV-EXT-003** ✅（隔离）｜湖南「智赋万企」报告｜同名异义样本｜Field Driven Engineering（共享驻场）≠ Forward Deployed Engineer；含 O-FDE 组织适配模型与 S.T.E.P. 四阶段｜第三方报告｜L3｜`ZCodeProject/FDE模式AI转型可行性分析.md`（Scribd 来源）｜2026-07-22｜仅作中国腰部企业落地约束的外部视角；DEC-2026-004 隔离｜无｜—｜Low-Medium｜2026-08-16
 
-**EV-EXT-004** 🟡｜跨组织（企业 AI 实践）｜基线方法｜AI 介入前先取四维基线（成本/时长/质量/量）；基线必须先于项目设立，「上线后发明指标」是常见失败模式；启动前指定单一具名业务指标、预设成功窗口｜从业者方法文章（多源一致）+ 学术侧证｜L2/L3（方法层 OBSERVATION）｜agility-at-scale.com《Generative AI Pilot Metrics》、classicinformatics 企业 AI 指南、arXiv 2512.04123《Measuring Agents in Production》（306 从业者+20 案例）｜抓取 2026-08-17｜支撑 TOOL-004 与 DEL-008｜—｜Medium-High｜2026-08-17
+**EV-EXT-004** 🟡（2026-08-17 返工降措辞：四维为常见候选框架而非普遍规则）｜跨组织（企业 AI 实践）｜基线方法｜基线必须先于项目设立，「上线后发明指标」是常见失败模式；启动前指定具名业务指标、预设成功窗口；**成本/时长/质量/量是多源常见的候选维度框架，不是必测清单**（OpenAI 官方方法主张从业务目的与最重要 outcome 出发——见 EV-EXT-007）｜从业者方法文章（多源一致）+ 学术侧证 + L1 锚点｜L2/L3 + L1（EV-EXT-007）｜agility-at-scale.com、classicinformatics、arXiv 2512.04123；一手锚点见 EV-EXT-007｜抓取 2026-08-17｜支撑 TOOL-004 v0.2 与 DEL-008｜—｜Medium｜2026-08-17
 
-**EV-EXT-005** 🟡｜跨组织（LLM 评测实践）｜人工参照系/Golden Case 方法｜试标注轮校准；机会校正一致率（κ/Fleiss，原始一致率在不平衡数据上误导）；目标 IAA≥0.8（行业惯例非硬规则）；分歧=判据含糊的诊断信号；第三人仲裁；数据集小而多样｜评测工程文章（多源一致）+ 学术｜L2/L3（方法学 FACT，阈值 OBSERVATION）｜booking.ai《LLM Evaluation: Practical Tips at Booking.com》、getmaxim.ai、arize.com、galtea.ai、arXiv 2506.13023｜抓取 2026-08-17｜支撑 TOOL-005；「最厉害员工≠Ground Truth」获得方法学支撑｜—｜Medium-High｜2026-08-17
+**EV-EXT-005** 🟡（2026-08-17 返工降措辞）｜跨组织（LLM 评测实践）｜人工参照系/黄金集方法｜试标注轮校准；机会校正指标（κ 类）**仅在输出可离散判定、样本与标注设计适用时使用**；IAA≥0.8 为部分来源的行业参考值，**非本 OS 硬规则**；分歧=判据含糊的诊断信号；第三人仲裁；数据集小而多样｜评测工程文章（多源一致）+ 学术 + L1 锚点（OpenAI golden set 定义 / METR human baseline，见 EV-EXT-007）｜L2/L3 + L1｜booking.ai、getmaxim.ai、arize.com、galtea.ai、arXiv 2506.13023｜抓取 2026-08-17｜支撑 TOOL-005 v0.2（A/B 两节）；「最厉害员工≠Ground Truth」的方法学支撑｜—｜Medium｜2026-08-17
 
-**EV-EXT-006** 🟡｜跨组织（流程/任务挖掘）｜Work Trace 方法侧证｜流程挖掘=系统事件日志（端到端）；任务挖掘=用户级交互数据，暴露系统事件**之间**的变通动作/手工返工/影子表格——观察数据须区分业务规则与系统摩擦｜厂商方法文档（多源一致：Signavio/Appian/UiPath/Paxray/ABBYY）｜L2/L3（方法层 OBSERVATION）｜signavio.com/wiki/process-discovery/process-mining-vs-task-mining 等｜抓取 2026-08-17｜支撑 TOOL-006 与 DEL-009；反向发现：影子表格可能承载未成文业务规则，不能一律判为摩擦｜—｜Medium｜2026-08-17
+**EV-EXT-006** 🟡｜跨组织（流程/任务挖掘）｜Work Trace 方法侧证｜流程挖掘=系统事件日志（端到端）；任务挖掘=用户级交互数据，暴露系统事件**之间**的变通动作/手工返工/影子表格——观察数据须区分业务规则与系统摩擦｜厂商方法文档（多源）+ **官方锚点：Microsoft Power Automate Process Advisor（Task Mining 目标=理解员工实际桌面操作、识别常见交互、错误与不必要动作）+ Anthropic agent eval（trajectory=含工具调用、状态变化与中间结果的全过程记录）**｜L2/L3 + L1（官方页）｜signavio.com、appian.com、uipath forum、paxray.com、abbyy.com；learn.microsoft.com/en-us/power-automate/process-advisor-overview；anthropic.com/engineering/demystifying-evals-for-ai-agents（后两条由复核方提供，本轮未逐字复核，标 🟡）｜抓取 2026-08-17｜支撑 TOOL-006 v0.2 与 DEL-009（状态变化字段即源于 Anthropic trajectory 定义）；反向发现：影子表格可能承载未成文业务规则｜—｜Medium｜2026-08-17
+
+**EV-EXT-007** ✅（2026-08-17 本地 Agent 亲自核验，RN-20260817-004 P1 指定的一手锚点包）｜OpenAI + METR｜评测方法 L1 锚点｜
+① **OpenAI《How evals drive the next chapter in AI for businesses》2026-06-17**（openai.com/index/evals-drive-next-chapter-of-ai/）：golden set=「your most skilled experts' judgement and taste for what great looks like」的**活的、权威参照**（a living, authoritative reference）；从 purpose 与 most important outcomes 出发；沿真实工作流端到端构建任务、覆盖决策点；错误分析须带分类法；评测数据回流形成飞轮——**直接支撑 TOOL-005 B 节定义与 TOOL-004「核心指标优先」**；
+② **METR Time Horizon 方法**（metr.org/time-horizons/）：human baseline=签约熟练专业人士（平均约 5 年经验）**在相同 instructions 与 affordances 下实际完成同批任务**，取成功完成时间的几何平均；Agent 评分另用自动成功标准，人类完成时间只用于度量任务难度——**直接支撑 TOOL-005 A 节（人工表现基准≠黄金答案集）**；自报局限：人类时长估计可能偏高。
+｜官方一手｜L1｜抓取/核验 2026-08-17｜TOOL-004/005、DEL-008｜—｜High（原文在手）｜2026-08-17
 
 ## D 组｜待获取与已补证（Palantir 批次已核验，2026-08-17，见 RN-20260817-001）
 
