@@ -1,45 +1,58 @@
 # FDE OS｜跨 Agent 协作入口
 
-本文件是本地 Agent / 本地 Codex 的稳定协调入口，不替代现有 IA、Master Index、Decision Log 或 Research Notes。
+本文件是本地 Agent / 本地 Codex 的**实时协调入口**。项目背景与长期上下文见 `LOCAL_CODEX_HANDOFF_PACKAGE_v1.0.md`；本文件与 open Issue 承载会随批次变化的实时状态。
 
-## 启动入口
+## 启动顺序
 
-任何 Agent 继续 FDE OS 前，先读取：
+1. 同步 `main`；
+2. 首次接管或长期中断后读取 `LOCAL_CODEX_HANDOFF_PACKAGE_v1.0.md`；
+3. 每次工作读取本文件；
+4. 检查 open Issues 与最新评论；
+5. 读取本批直接涉及的 Decision / Evidence / Research Note / Toolkit；
+6. 只执行当前批次。
 
-- `00_Master_Index/LOCAL_CODEX_HANDOFF_PACKAGE_v1.0.md`
+## 当前批次
 
-该文件包含项目目标、当前状态、证据纪律、两个 Agent 的分工、当前返工任务和 Batch 2 之后的推荐顺序。
+- Issue #1：`Batch 2｜Baseline / Human Benchmark / Work Trace`
+- 状态：**部分通过，返工后复核**
+- 审核依据：`09_Research_Notes/RN-20260817-004-chatgpt-batch2-audit.md`
 
-## 当前工作批次
+## 冲突裁决
 
-继续执行 GitHub Issue：
+交接包 v1.0 §3 中“最新 commit 优先”仅用于判断哪里发生了新变化，**不代表最新 commit 自动最权威**。未复核的 Builder commit 不能仅因时间更新就覆盖已核证据或正式 Decision。
 
-- #1 `Batch 2｜Baseline / Human Benchmark / Work Trace：研究、定义与最小工具包`
-- 当前状态：部分通过，返工后复核
-- 独立验收：`09_Research_Notes/RN-20260817-004-chatgpt-batch2-audit.md`
+判断当前任务状态时，依次看：当前 Issue 验收与 Reviewer 最新结论 → 已生效 Decision → 本文件 → 历史状态文件。
 
-## 本地 Agent 启动规则
+判断事实或方法主张时，依次看：原始证据与已核 Evidence → 已复核的 Research / Audit Note → Decision（只约束我们的设计选择）→ Master Index → Gap Map / 旧材料。
 
-每次继续 FDE OS 工作前：
+Commit 时间只表示 freshness，不等于证据权威。
 
-1. 先同步 `main`；
-2. 读取 `LOCAL_CODEX_HANDOFF_PACKAGE_v1.0.md`；
-3. 读取本文件；
-4. 检查未关闭的 GitHub Issues 与最新评论；
-5. 只执行当前批次，不自行扩张范围；
-6. 完成后提交 commit，并在对应 Issue 或阶段报告中写明变更文件、证据变化、未解决问题。
+## 双 Agent 分工
 
-## 双 Agent 协作
+默认：
 
-- Builder / Integrator：负责 canonical 文件修改与整合；
-- Independent Reviewer / Research Auditor：负责独立取证、反例、证据等级与现场可执行性审核，优先通过 Issue / Audit Note 反馈，不与 Builder 并发修改同一批 canonical 文件。
+- **Builder / Integrator**：原本地 Agent，负责 canonical 文件修改、commit、阶段报告。
+- **Independent Reviewer / Research Auditor**：新本地 Codex，负责独立取证、反例、证据等级和现场可执行性审核；优先用 Issue 评论或 Audit Note，不与 Builder 并发修改同一批 canonical 文件。
 
-详细角色、冲突处理和后续路线以 `LOCAL_CODEX_HANDOFF_PACKAGE_v1.0.md` 为准。
+Builder 不能跳过 Reviewer 的 `REQUEST CHANGES`；Reviewer 不能因为个人偏好直接重写 Builder 的实现。
 
-## 用户角色
+## 批次切换
 
-用户只负责查看阶段报告和验收结果，不承担 Agent 之间的传话或日常仲裁职责。
+1. 当前 Issue 未 `PASS` 前，原则上不开下一批；
+2. Builder 提交 commit + 短报告；
+3. Reviewer 核 patch，给 `PASS` 或 `REQUEST CHANGES`；
+4. `PASS` 后 Reviewer 可关闭当前 Issue；
+5. 下一批由 Builder 从已登记 Gap / handoff 推荐路线中起草 Issue；
+6. Reviewer 检查范围和验收条件后再开始；
+7. C 类结构改动、不可逆公司战略选择或超出现有路线的任务，先走 Change Proposal / 用户裁决。
 
-## 变更原则
+## 写入规则
 
-继续遵守 `续建工作协议_v1.0.md`：中文优先、三轮验证、最小侵入、稳定 ID 不破坏、结构性修改先提 Change Proposal。
+- 同一时间只有 Builder 修改同一组 canonical 文件；
+- Reviewer 审核优先留 Issue，确有长期复用价值再建 Audit Note；
+- commit 写明为什么改、改了什么；
+- 稳定 ID 不变；
+- 结构变化先 Change Proposal；
+- 用户只看批次结束后的短报告，不承担 Agent 传话或日常仲裁。
+
+继续遵守 `续建工作协议_v1.0.md`：中文优先、三轮验证、最小侵入、稳定 ID 不破坏。
