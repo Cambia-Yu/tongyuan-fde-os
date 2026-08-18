@@ -28,7 +28,7 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 
 **EV-NIST-001** ✅｜NIST｜AI 风险治理｜先建立情境（用途/价值/任务/范围/风险容忍/人类监督/数据代表性）再作初始决定；记录放行或停止决定｜官方框架｜L1｜台账 PUB-03｜—｜支撑准入证据包与放行记录制度｜DEL-002/D-5｜—｜High｜2026-07-23
 
-**EV-GART-001** 🟡｜Gartner｜原型存活率｜2025 年生成式 AI 原型约 41%、其他 AI 原型约 42% 进入生产｜行业统计｜L1（原报告未取得）｜deep-research L23 转引｜2025｜—｜支撑「受控上岗/放行门槛」必要性｜DEL GATE-5/6｜—｜Medium｜未核验
+**EV-GART-001** ✅（2026-08-18 升级：页面级一手核验，Batch 8 红队）｜Gartner｜原型存活率｜① 官方文档页《Proportion of AI and GenAI Prototypes Making It Into Production》（gartner.com/en/documents/6587902）：**平均仅 41% 生成式 AI 原型、42% 非生成式 AI 原型进入生产**（研究正文需订阅，页面摘要含确切数字）；② 官方新闻稿 2024-07-29（gartner.com/newsroom/press-releases/2024-07-29-…）：**预测 30% 生成式 AI 项目将于 2025 底前在 PoC 后放弃**，原因=数据质量差/风险控制不足/业务价值不清（完整 L1）｜官方｜L1（页面级）｜核验 2026-08-18｜支撑 DEL-005 指标纪律（异常1 拦截）；红队攻击背景｜不回答通元客户的具体组织机制（边界保留）｜High（①）/High（②）｜2026-08-18 升级
 
 ## B 组｜通元问科项目证据（EV-TY）
 
@@ -129,3 +129,8 @@ rule: 每条证据必须说明「它证明了什么」；来源缺失的条目�
 **EV-NIST-002** ✅（2026-08-18 核验；**2026-08-18 返工更正来源**：原写「AI RMF 1.0 Playbook」不准确，Manage 4.1-4.3 条款原文出自 **AI RMF 1.0 Core, Table 4**；Playbook 为建议集合另行引用不混称）｜NIST｜部署后控制类别 L1 锚点｜AI RMF 1.0 **Core, Table 4, Manage 4.1-4.3**：**Manage 4.1** 部署后监测计划（含用户输入捕获与评估、申诉/覆盖、停用/退役、事件响应、恢复、变更管理）；**Manage 4.2** 持续改进（反馈整合、可信特征入改进指标、与法律框架对齐）；**Manage 4.3** 事件与错误沟通（向相关方与受影响社区通报、错误与未遂事件库、版本史）｜官方框架 Core｜L1｜https://airc.nist.gov/airmf-resources/airmf/5-sec-core/（Core Table 4）；Playbook 建议如引用另记页面｜核验 2026-08-18，返工更正 2026-08-18｜支撑 DEL-013/TOOL-009 的**控制类别清单**（监测/申诉/停用/响应/恢复/变更/沟通）；不替通元决定具体模式或阈值｜—｜High｜2026-08-18
 
 **EV-OAI-004** 🟡（2026-08-18 检索留痕；同日按二次验收收敛为限定表述）｜OpenAI 部署公司 + Tomoro｜计费与结算条款｜**限定结论：截至 2026-08-18，在已检查的 OpenAI 启动公告（openai.com/index/openai-launches-the-deployment-company/）、deploy.co 首页及所列检索路径中，未发现 DeployCo/Tomoro engagement 的具体计费与结算条款**。① OpenAI 通用 Business/API 价格页**存在**（openai.com/business/pricing/）——不等于 DeployCo engagement 定价；② 19 家投资伙伴=启动公告官方事实（EV-OAI-002，L1）；③ 分析师「按结果/任务付费」预期=转述层观点（例：Coommit coommit.com/blog/forward-deployed-engineer-ai-2026；The AI Opportunities playbook theaiopportunities.com/p/the-openai-deployment-company-playbook），**不承担正文主张**；模糊估值口径（媒体 100-140 亿美元不一致）删除不用；④ 检索词（2026-08-18）：DeployCo pricing／OpenAI Deployment Company pricing model／Tomoro AI pricing——官方计费条款未命中｜官方页 L1（结构事实）/计费 Unknown（限定范围）｜抓取+复核 2026-08-18｜商业模型 §1/§8｜—｜Low（转述层）/High（负面检索范围如实）｜2026-08-18 更正
+
+
+**EV-CN-001** 🟡（2026-08-18 检索登记，Batch 8）｜中国企业 AI 失败素材（单方叙述）｜《七个月驻场，六周失准：团队缺的不是 AI，是 FDE》（知乎专栏，zhuanlan.zhihu.com/p/2052808167919293158）：杭州某制造企业 AI 质检——乙方 3 名驻场工程师 7 个月，上线 6 周后模型失准；归因=数据漂移+业务闭环缺失｜自媒体单方叙述｜L4（未核当事人）｜抓取 2026-08-18｜仅作 DEL-007（数据质量攻击）/DEL-010（抵触与失用）的攻击素材，**不作为事实结论**｜—｜Low｜2026-08-18
+
+**EV-CN-002** 🟡（2026-08-18 检索登记）｜中国 FDE 讨论与 toB 约束（媒体课程层）｜① InfoQ/极客时间《Demo 能跑，项目却落不了地：企业真正缺的是 FDE 能力》——6 类高频失败模式（需求失真/价值不清/验收困难等，infoq.cn/article/ZvwSZ2U61Q8uBMerbYD9）；② 至顶网 2026-07《为什么中国企业 AI 落地更需要 FDE？》——中国 toB 特殊约束：招投标、账期、信创合规（zhiding.cn/ai-applications/2026/0728/3194636.shtml）；③ 网易智企《复盘 100+ AI 项目》｜媒体/课程转述｜L3-L4｜抓取 2026-08-18｜DOC-001 攻击背景（低价驻场市场存在）；**未找到可核的中国 FDE 机制失败一手复盘——检索范围与缺口记录：两组检索词×2 变体（2026-08-18），命中均为媒体层**｜—｜Low-Medium｜2026-08-18
