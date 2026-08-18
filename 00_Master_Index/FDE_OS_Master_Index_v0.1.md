@@ -51,6 +51,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | DEL-009 | Work Trace 方法 | 方法草案已建（TOOL-006 v0.2.1）：真实人员处理真实 Case 的行为序列采集（八要素含耗时与动作结果/状态变化）；行为与事后自述分列；动作三分类（业务规则候选/系统摩擦/混合待核）；样本以**轨迹饱和+关键异常覆盖**为准（3-5 笔仅为初始 discovery 最低样本）；方案设计链路≠行为轨迹 | Designed（草案，未现场验证） | DESIGN DECISION（方法采信）；瓴羊投手案例佐证「优秀员工真实行为=训练对象」（EV-LY-001③，H-7 的组织级事实） | EV-EXT-006 + EV-EXT-007 + EV-EXT-001 + EV-LY-001 [13:24-15:40] | Medium-High |
 | DEL-012 | 评测方法（G-12） | 设计决定（候选）：评测四对象分立（参照系/黄金集=输入，能力/回归集=产出+毕业迁移记录）；**Entry 不强制文本黄金答案**（可客观验证类直判）；试验策略预声明（trial+聚合指标）；案例登记时序用途制（开发见过/首版/迁移；同版本不得双用）；评分器三型与人工校准；错误分类接反馈路由；生产案例四步防污染；**阈值三栏批准**（业务口径确认/技术充分性复核/有权人正式批准）；无通用样本量/通过线（Anthropic 20-50=早期参照）｜服务 GATE-5，只判达标不判生产风险 | Designed（候选，未现场验证） | DESIGN DECISION（EV-ANT-003 L1） | EV-ANT-003；EV-EXT-007；TOOL-008 | Medium-High |
 | DEL-013 | 受控部署与回滚（G-11） | 设计决定（候选）：四种运行方式=**可选控制模式非升级阶梯**（停级/跳过/降级合法；全自动非必然终点；高风险放行权不因模式转移）；Entry 含 **U2 六项**（数据授权/鉴权/日志审计/安全隐私/维护责任/权限停止恢复）；**安全关键未知直接 Hold**（不得以登记 Unknown 绕过）、可接受未知须风险接受人+补偿；回滚十要素+**演练三档**（仅文档/桌面≠已验证恢复能力）；恢复验证=回归集+在途任务+接管容量+监测告警｜服务 GATE-6，只判风险不构成部署认证，≠U4/U5 | Designed（候选，未现场验证） | DESIGN DECISION（NIST Core Table 4 支撑控制类别） | EV-NIST-002；EV-LY-001⑦；EV-EXT-008；TOOL-009 | Medium |
+| DEL-014 | 能力沉淀与上浮（G-09） | 设计决定（候选）：三道判断分立（触发评审/公共层准入/成熟状态升级，证据上限：纸面推演≤内部演练、单项目≤单项验证、重复验证须多项目）；四类适用范围标签；四类防污染（权利/数据/业务语义/技术与运行耦合）；五方权责（合并批准权仅覆盖准入/合并）；准入=可发现可判断可受控调用≠复制进公共仓库；效果六项（复用率升但负担升→不判成功）；失败模式为独立资产 | Designed（候选，未现场验证） | DESIGN DECISION（Palantir/瓴羊仅证机制存在；手册附录二=对接基线） | EV-PAL-001/002/003；EV-LY-001④；能力沉淀 v0.1+TOOL-010 | Medium |
 | DEL-011 | 使用轨迹与反馈路由 | 设计决定（候选）：五级使用状态 U1-U5（一次轨迹≠使用率、一次使用≠现场验证、GATE-6≠部署认证）；真实交付入口统一定义（不限 URL）；条件式反馈路由（使用证据四步入评测集、评测失败按根因分流、重复模式仅触发上浮候选评审、使用证据进六态产品决定）；观测物=TOOL-007 | Designed（候选，未现场验证） | DESIGN DECISION（GOV.UK beta/live 与 NIST AI 800-4 支撑总体模式，EV-EXT-008） | EV-EXT-008；EV-LY-001③；EV-PAL-002；TOOL-007 | Medium |
 | DEL-010 | 客户采用/ROI 阶段 | 已裁决（2026-08-18，DEC-2026-013/R-3，候选落位）：并入阶段 08 的 Exit 必查维度（实际使用率/业务结果对照基线/ROI 口径）+ GATE-7 证据输入；不设独立阶段；C 类备选（07a 采用确认）触发条件已登记 | Designed（候选落位，未现场验证） | DESIGN DECISION | 官网5；EV-LY-001 [18:11]；手册第 7 章 | Medium |
 
@@ -79,7 +80,8 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | TOOL-007 | 使用轨迹表（Usage Trace Sheet） | Draft V0.1（2026-08-18，Issue #4 获批设计；与 TOOL-006 语义独立；含数据边界与三铁律） | `05_Field_Toolkit/TOOL-007_使用轨迹表_草案.md` |
 | TOOL-008 | 评测集构建与回归表（Eval Suite Sheet） | Draft V0.1（2026-08-18；四对象分立+防污染+阈值批准制） | `05_Field_Toolkit/TOOL-008_评测集构建与回归表_草案.md` |
 | TOOL-009 | 受控部署记录表（Controlled Deployment Sheet） | Draft V0.1（2026-08-18；四模式四要素+回滚十要素） | `05_Field_Toolkit/TOOL-009_受控部署记录表_草案.md` |
-| TOOL-010~020 | 其余待建项（Stakeholder Map、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
+| TOOL-010 | 上浮候选与泛化评审记录表（Edge→Core Review Sheet） | Draft V0.1（2026-08-18；三道判断记录+拆分测试+四类防污染+五方权责；与 24 字段资产卡分工不复制） | `05_Field_Toolkit/TOOL-010_上浮候选与泛化评审记录表_草案.md` |
+| TOOL-011~020 | 其余待建项（Stakeholder Map、Shadow Run、Go/Hold/No-Go、Bad Case Review、Edge→Core Submission 等） | 未建 | — |
 
 ## 附：编号映射表（手册体系 ↔ OS 体系）
 
