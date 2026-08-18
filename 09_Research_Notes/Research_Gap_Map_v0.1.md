@@ -20,7 +20,7 @@ legend: 现有证据强度（High/Med/Low/None）× 对 FDE OS 的重要性（Hi
 | G-06 | Deployment Leverage 与四健康指标 | **中（2026-08-18）**：四健康信号登记框架已建（数据未登记）；Palantir FY2023 总体毛利 81% vs Accenture 32.3%=**组织级财务背景（EV-PAL-004 一手核验）**，FDE 因果证据仍来自口述/机制材料（EV-PAL-002/003，上限 L2/L3）；跨组织仍缺 | High | P1（跨组织验证+首批现场数据） | COM-004、H-4 |
 | G-07 | Land & Expand vs Value Depth | **框架已建（2026-08-18 Batch 6）**：两轴候选登记（横=商业范围，纵=价值深度证据），信任→访问→关键度→深度维持 HYPOTHESIS；外部对照与现场数据仍缺 | Med-High | P1（跨组织验证+现场数据） | COM-002/DOC-004、H-5 |
 | G-08 | Value Unit vs Pricing 各公司实证 | **中低（2026-08-18）**：瓴羊坐席/效果分成（单受访者 L3）；Palantir 方向性（L2）；DeployCo/Tomoro 官方计费未发现（EV-OAI-004 限定表述）；行业级归纳仍缺 | High | P1（跨组织验证） | COM-003、H-6 |
-| G-09 | Edge→Core 泛化与防污染机制 | None | High | P1 | ORG-003、C 系统 |
+| G-09 | Edge→Core 泛化与防污染机制 | **高（2026-08-18 Batch 7 完成，Reviewer PASS）**：能力沉淀 v0.1+TOOL-010 v0.3.1（三道判断/四类标签/四类防污染/五方权责/双入口条件式分支）；跨客户有效性、全局数值阈值、效果数据仍 Unknown | High | 方法已建，转现场验证 | ORG-003、DEL-014、阶段 09 |
 | G-10 | FDE 反方观点系统收集 | None | High | P1 | 全模块（§29 十问） |
 | G-11 | 受控上岗/回滚 | **高（2026-08-18 Batch 5 完成，Reviewer PASS）**：DEL-013+TOOL-009（四模式=可选控制模式、回滚十要素、演练三档、NIST Core Table 4 锚点）；余项=现场验证与跨组织回滚实证 | Med | 方法已建，转现场验证 | DEL-013、H-9 |
 | G-12 | Eval 方法 | **高（2026-08-18 Batch 5 完成，Reviewer PASS）**：DEL-012+TOOL-008（四对象分立、时序用途制、阈值三栏批准、EV-ANT-003 L1 锚点）；余项=现场验证 | Med | 方法已建，转现场验证 | DEL-012 |
