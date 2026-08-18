@@ -3,7 +3,7 @@ id: TOOL-009
 type: toolkit-draft
 中文名: 受控部署记录表（Controlled Deployment Sheet）
 适用阶段: "阶段07｜受控部署（服务 GATE-6）"
-version: 0.1（草案；未盲测、未现场验证）
+version: 0.2（0.1 基础上新增漂移最小监测链——红队 v0.2 落点，2026-08-18；未盲测、未现场验证，成熟度不升级）
 updated: 2026-08-18
 status: 草拟
 贯穿案例: 网络货运支付前智能审核（与 TOOL-008 同一案例）
