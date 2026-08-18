@@ -17,7 +17,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 |---|---|---|---|---|---|---|
 | DOC-001 | FDE 定义 | 面向真实业务结果的现场交付方式：从发现到生产发布的连续责任，非驻场开发/售前/PM 单一角色 | Evidence-backed | FACT（定义层面） | EV-OAI-001/002 | High |
 | DOC-002 | FDE vs 咨询/外包/SaaS/SI | 边界未研究；仅有「Deployment Leverage 差异」假设 | Researching | — | 待 G-06/G-10 | Low |
-| DOC-003 | Deployment Leverage | 假设：FDE 与咨询的核心差异是部署杠杆（同类新项目现场人力递减）；首个单组织实证已取得（Palantir 毛利 80% vs 埃森哲 32%；新客户约 1 年毛利转正、现场团队缩小） | Researching | HYPOTHESIS（行业级）/ Palantir 事实（L2） | EV-PAL-002/003；G-06 剩余跨组织验证 | Low-Medium |
+| DOC-003 | Deployment Leverage | 假设：FDE 与咨询的核心差异是部署杠杆（同类新项目现场人力递减）；首个单组织实证已取得（公司级财务背景=Palantir FY2023 81% vs Accenture 32.3%，EV-PAL-004 一手；FDE 侧证据=新客户约 1 年毛利转正、现场团队缩小，EV-PAL-003 口述 L2） | Researching | HYPOTHESIS（行业级）/ Palantir 事实（L2，FDE 侧）+ 公司级背景（L1 一手） | EV-PAL-003/004；G-06 剩余跨组织验证 | Low-Medium |
 | DOC-004 | Value Depth | 假设：Trust→Access→Mission Criticality→Value Depth 是合同深化的真实结构；Land and Expand 是事实但「越签越贵」不是定义 | Researching | HYPOTHESIS | 待 G-07 | Low |
 | DOC-005 | 复杂度阶梯 | 默认从单次辅助起步，七级递升，每级升档需上级运行证据 | Designed | DESIGN DECISION（采信 L1 实践） | EV-ANT-001 | High |
 | DOC-006 | 卖结果≠outcome pricing | Value Unit 与 Pricing Mechanism 分离；禁止从「不卖人天」推出「必须结果付费」 | Researching | HYPOTHESIS | 待 G-08 | Medium |
@@ -61,7 +61,7 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | COM-001 | 信用阶梯 | 陌生→入口→关系→判断→交易→交付→Reference→机构（八级）；用可逆承诺改造一次性信任 | Researching | INFERENCE | EV-TY-008 | Medium-High |
 | COM-002 | 首单机制 | 低风险≠免费、付费≠commitment；真正变量是客户承诺向量（预算/sponsor/负责人/数据/用户/节奏/上线资源） | Researching | INFERENCE | EV-EXT-002 | Medium |
 | COM-003 | Value Unit / Pricing | 瓴羊实证已取得：两类——按坐席收费（成本替代 8-9 折同效果）+按效果分成（超出人工基线的增长部分分成，MVP+AB test 结算，连续续费客户真实存在）；与「不卖人天」原则的关系：瓴羊明确拒绝千人天采购（EV-LY-001⑧/嘉宾 [26:40-27:39]） | Researching | 瓴羊事实（L3）；行业级仍 INFERENCE | EV-LY-001；Palantir=EV-PAL-003（L2 口述）；DeployCo/Tomoro 官方计费未发现（EV-OAI-004，2026-08-18）；**G-08 未关闭**（跨组织实证仍缺） | Medium |
-| COM-004 | 四健康指标 | 候选登记框架（商业模型 §3：11 字段×4 项，数据自 TOOL-004/007/合同台账/资产索引，截至 2026-08-18 仓库未登记、本批未取得；合同额/确认收入/回款/毛利不可互换；不合成健康分）｜原假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标；Palantir 版两大内部指标（结果价值/合同规模 + 产品杠杆）与之高度吻合（单组织） | Researching | HYPOTHESIS | EV-PAL-003（McGrew 两指标）；EV-PAL-002（毛利对比） | Low-Medium |
+| COM-004 | 四健康指标 | 候选登记框架（商业模型 §3：11 字段×4 项，数据自 TOOL-004/007/合同台账/资产索引，截至 2026-08-18 仓库未登记、本批未取得；合同额/确认收入/回款/毛利不可互换；不合成健康分）｜原假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标；Palantir 版两大内部指标（结果价值/合同规模 + 产品杠杆）与之高度吻合（单组织） | Researching | HYPOTHESIS | EV-PAL-003（McGrew 两指标）；EV-PAL-004（毛利一手校正，公司级背景） | Low-Medium |
 | COM-005 | 不卖 ROI 保证 | 过程/里程碑保证（gate 未过则停），不承担不可控结果风险 | Designed | DESIGN DECISION | EV-TY-008 L120 | Medium-High |
 | COM-006 | 信用归因权 | 五个必须占住的可见位置（问题定义/指标共定/评审主持/复盘作者/高层关系） | Designed | DESIGN DECISION | EV-TY-008 | Medium |
 | COM-007 | 输出层信用纪律 | 官网三层信用划分；未证实宣称一律下线 | Designed | DESIGN DECISION | EV-TY-007 | High |

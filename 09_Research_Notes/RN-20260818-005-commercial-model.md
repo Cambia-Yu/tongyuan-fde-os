@@ -23,7 +23,7 @@ batch: Batch 6（Issue #6）
 分析师对 DeployCo 定价的预期（outcome-based）与官方沉默并存——登记为「转述 vs Unknown」，不裁决。
 
 ## Implications
-商业模型 v0.1 为 04 模块首份 canonical 文档；真实改动：COM-003 证据列更新、COM-002/004 置信列修复（说明移入规则列）、Gap Map G-06/08/15 行更新（G-07 补登记见下版）。
+商业模型 v0.1 为 04 模块首份 canonical 文档；真实改动：COM-003 证据列更新、COM-002/004 置信列修复（说明移入规则列）、Gap Map G-06/07/08/15 已更新。
 
 ## Remaining unknowns
 见商业模型 §8（定价/财务口径/健康信号数据/效果分成样本/低价判别证伪数据）。
