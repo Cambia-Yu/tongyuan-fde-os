@@ -59,9 +59,9 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | Rule | 主题 | 当前规则 | 状态 | 知识状态 | 证据 | 置信 |
 |---|---|---|---|---|---|---|
 | COM-001 | 信用阶梯 | 陌生→入口→关系→判断→交易→交付→Reference→机构（八级）；用可逆承诺改造一次性信任 | Researching | INFERENCE | EV-TY-008 | Medium-High |
-| COM-002 | 首单机制 | 低风险≠免费、付费≠commitment；真正变量是客户承诺向量（预算/sponsor/负责人/数据/用户/节奏/上线资源） | Researching | INFERENCE | EV-EXT-002 | Medium |
+| COM-002 | 首单机制 | 低风险≠免费、付费≠commitment；真正变量是客户承诺向量（预算/sponsor/负责人/数据/用户/节奏/上线资源） | Researching | INFERENCE | EV-EXT-002 | Medium（瓴羊结算样本为单受访者，8-9 折不作报价依据） |
 | COM-003 | Value Unit / Pricing | 瓴羊实证已取得：两类——按坐席收费（成本替代 8-9 折同效果）+按效果分成（超出人工基线的增长部分分成，MVP+AB test 结算，连续续费客户真实存在）；与「不卖人天」原则的关系：瓴羊明确拒绝千人天采购（EV-LY-001⑧/嘉宾 [26:40-27:39]） | Researching | 瓴羊事实（L3）；行业级仍 INFERENCE | EV-LY-001；Palantir 定价证据待 G-08 | Medium |
-| COM-004 | 四健康指标 | 假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标；Palantir 版两大内部指标（结果价值/合同规模 + 产品杠杆）与之高度吻合（单组织） | Researching | HYPOTHESIS | EV-PAL-003（McGrew 两指标）；EV-PAL-002（毛利对比） | Low-Medium |
+| COM-004 | 四健康指标 | 候选登记框架（商业模型 §3：11 字段×4 项，数据自 TOOL-004/007/合同台账/资产索引，当前全部未采；合同额/确认收入/回款/毛利不可互换；不合成健康分）｜原假设：客户结果↑/ACV↑/单位人力↓/复用比例↑ 可作 FDE 健康度核心指标；Palantir 版两大内部指标（结果价值/合同规模 + 产品杠杆）与之高度吻合（单组织） | Researching | HYPOTHESIS | EV-PAL-003（McGrew 两指标）；EV-PAL-002（毛利对比） | 登记框架级（数据全未采；不设阈值不合成分） |
 | COM-005 | 不卖 ROI 保证 | 过程/里程碑保证（gate 未过则停），不承担不可控结果风险 | Designed | DESIGN DECISION | EV-TY-008 L120 | Medium-High |
 | COM-006 | 信用归因权 | 五个必须占住的可见位置（问题定义/指标共定/评审主持/复盘作者/高层关系） | Designed | DESIGN DECISION | EV-TY-008 | Medium |
 | COM-007 | 输出层信用纪律 | 官网三层信用划分；未证实宣称一律下线 | Designed | DESIGN DECISION | EV-TY-007 | High |
