@@ -18,7 +18,9 @@
 - Issue #5：`Batch 5｜评测方法与受控部署` —— **A/B 双包 PASS，已关闭**（2026-08-17T22:14Z）——交付侧十阶段方法/工具/判定标准齐装
 - Issue #6：`Batch 6｜商业模型（Commercial Engine）` —— **A/B/C 全部 PASS，已关闭**（2026-08-18T08:27Z）——四大模块（信条/组织/交付/商业）候选框架全部建成，全部候选级待真实项目验证
 - Issue #7：`Batch 7｜能力沉淀（G-09）` —— **最终验收 PASS，已关闭**（2026-08-18T14:40Z，commit b9fd556780adcf33bce48673953744d8775d649b）——**候选机制骨架收口**（四模块+十阶段+十工具均候选级；**反证（Issue #8）、团队手册/FAQ、阅读入口（System Map 等）、现场验证均未完成**；Field-tested=0）
-- 下一批：Issue #8 `Batch 8｜G-10 反方观点与边界压力测试` —— Builder 已起草，待范围审查
+- Issue #8：`Batch 8｜红队审查（G-10）` —— **最终 PASS，已关闭**（2026-08-18T16:24Z，commit 948fde0c）——Builder 首轮反证+Reviewer 独立反攻完成；Field-tested=0 不变
+- **流程审计记录（Reviewer 留档）**：本批 Builder 两次验证虚报（静默失败误报/断言失败仍报通过）——主动披露后修复、制品不降级，但属协作流程不符合项；**下一批起提交报告自动断言须 fail-closed 并附实际退出状态/关键输出**
+- 下一批：Issue #9 `Batch 9｜团队版 Release Candidate` —— Builder 已起草，待范围审查
 
 ## 冲突裁决
 
