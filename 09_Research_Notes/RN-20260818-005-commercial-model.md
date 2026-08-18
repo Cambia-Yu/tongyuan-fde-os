@@ -30,3 +30,8 @@ COM-002/003/004/006 证据列更新（见 Master）；商业模型 v0.1 为 04 �
 
 ## Rules affected
 COM-001~007 证据与文案微调（逐条）。
+
+
+## 三轮验证补全（C-P1）
+- 内部：对照 COM-001~007 与十一条边界逐条核对；外部：官方公告/deploy.co/价格页/SEC/ACN 财报一手核验（定价负面检索留痕 EV-OAI-004；毛利一手校正=Reviewer 核验 Palantir 81%/Accenture 32.3%）；对抗：A-P0-1~4/B-P0-1~3/C-P0-1~2 全部由复核暴露并修正。
+- 知识状态：四分离/登记框架/双轴/低价判别=**DESIGN DECISION（候选）**；瓴羊结算样本=L3 单组织事实；毛利对照=公司级背景事实；DeployCo/Tomoro 计费=Unknown（限定范围）；健康信号效用=HYPOTHESIS。
