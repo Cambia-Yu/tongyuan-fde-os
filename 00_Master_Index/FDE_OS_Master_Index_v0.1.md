@@ -80,8 +80,8 @@ note: Field-tested 与 Validated 当前为零——未经过真实项目证据�
 | TOOL-007 | 使用轨迹表（Usage Trace Sheet） | Draft V0.1（2026-08-18，Issue #4 获批设计；与 TOOL-006 语义独立；含数据边界与三铁律） | `05_Field_Toolkit/TOOL-007_使用轨迹表_草案.md` |
 | TOOL-008 | 评测集构建与回归表（Eval Suite Sheet） | Draft V0.1（2026-08-18；四对象分立+防污染+阈值批准制） | `05_Field_Toolkit/TOOL-008_评测集构建与回归表_草案.md` |
 | TOOL-009 | 受控部署记录表（Controlled Deployment Sheet） | Draft V0.1（2026-08-18；四模式四要素+回滚十要素） | `05_Field_Toolkit/TOOL-009_受控部署记录表_草案.md` |
-| TOOL-010 | 上浮候选与泛化评审记录表（Edge→Core Review Sheet） | Draft V0.1（2026-08-18；三道判断记录+拆分测试+四类防污染+五方权责；与 24 字段资产卡分工不复制） | `05_Field_Toolkit/TOOL-010_上浮候选与泛化评审记录表_草案.md` |
-| TOOL-011~020 | 其余待建项（Stakeholder Map、Shadow Run 记录、Go/Hold/No-Go、Bad Case Review 等——Edge→Core Submission 已由 TOOL-010 承担） | 未建 | — |
+| TOOL-010 | 上浮候选与泛化评审记录表（Edge→Core Review Sheet） | Draft V0.3（2026-08-18；双入口+条件式分支+三分支示例；与 24 字段资产卡分工不复制） | `05_Field_Toolkit/TOOL-010_上浮候选与泛化评审记录表_草案.md` |
+| TOOL-011~020 | 其余待建项（干系人地图、影子运行记录、放行决策表、坏案例复盘等） | 未建 | — |
 
 ## 附：编号映射表（手册体系 ↔ OS 体系）
 
