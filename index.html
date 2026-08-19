@@ -252,7 +252,12 @@ async function openDoc(path,scrollTo){
         el.addEventListener('click',e=>{e.preventDefault();openDoc(norm);});
       } else if(clean.endsWith('/')){
         el.addEventListener('click',e=>{e.preventDefault();
-          const first=FILES.find(f=>f.path.startsWith(clean)&&f.path.endsWith('.md'));
+          const base=currentPath?currentPath.replace(/[^/]+$/,''):'';
+          const norm=(base+clean).split('/').reduce((acc,part)=>{
+            if(part==='.'||part==='')return acc;
+            if(part==='..')acc.pop();else acc.push(part);return acc;
+          },[]).join('/')+'/';
+          const first=FILES.find(f=>f.path.startsWith(norm)&&f.path.endsWith('.md'));
           if(first)openDoc(first.path);
         });
       }
