@@ -152,6 +152,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:v
 <script>
 'use strict';
 const $=s=>document.querySelector(s);
+const NAV_GROUPS={'先了解':['.','07_System_Map','01_Doctrine'],'照着做':['08_Outputs'],'常见问题':[],'现场工具':['05_Field_Toolkit'],'进阶·治理':['00_Master_Index','06_Evidence_Library','09_Research_Notes','10_Decision_Log','02_Operating_Model','03_Delivery_Playbook','04_Commercial_Engine','_archive']};
 const DIR_LABELS={
   '.':'根目录','00_Master_Index':'00 总控 · Master Index','01_Doctrine':'01 信条 · Doctrine',
   '02_Operating_Model':'02 组织模型 · Operating Model','03_Delivery_Playbook':'03 交付手册 · Playbook',
@@ -191,32 +192,30 @@ function fileTitle(path,raw){
 /* ---------- 目录树 ---------- */
 function renderTree(){
   const tree=$('#tree');tree.innerHTML='';
-  const groups=new Map(ORDER.map(k=>[k,[]]));
-  FILES.forEach(f=>{
-    const d=f.path.includes('/')?f.path.split('/')[0]:'.';
-    if(!groups.has(d))groups.set(d,[]);
-    groups.get(d).push(f);
-  });
-  const haveFiles=new Set(FILES.map(f=>f.path.includes('/')?f.path.split('/')[0]:'.'));
-  for(const key of ORDER){
-    const items=groups.get(key)||[];
-    if(!items.length&&key!=='.'){ // 空目录也显示骨架
-      const g=document.createElement('div');g.className='tgroup empty';
-      g.innerHTML=`<div class="glabel">${esc(DIR_LABELS[key]||key)} ·（未建）</div>`;
-      tree.appendChild(g);continue;
-    }
-    if(!items.length)continue;
+  if(SEARCHQ&&SEARCHQ.trim()){return renderSearch(SEARCHQ.trim());}
+  const mkItem=f=>{
+    const ti=INDEX.has(f.path)?INDEX.get(f.path).title:f.path;
+    const b=document.createElement('button');b.className='titem';b.dataset.path=f.path;
+    b.innerHTML='<span class="cnt">'+fmtSize(f.size)+'</span>'+esc(ti);
+    b.onclick=()=>openDoc(f.path);return b;
+  };
+  const mkGroup=(label,files)=>{
+    if(!files.length)return;
     const g=document.createElement('div');g.className='tgroup';
-    g.innerHTML=`<div class="glabel">${esc(DIR_LABELS[key]||key)}</div>`;
-    items.forEach(f=>{
-      const t=INDEX.has(f.path)?INDEX.get(f.path).title:f.path;
-      const b=document.createElement('button');b.className='titem';b.dataset.path=f.path;
-      b.innerHTML=`<span class="cnt">${fmtSize(f.size)}</span>${esc(t)}`;
-      b.onclick=()=>openDoc(f.path);
-      g.appendChild(b);
-    });
-    tree.appendChild(g);
-  }
+    g.innerHTML='<div class="glabel">'+esc(label)+(files.length?'':'（未建）')+'</div>';
+    files.forEach(f=>g.appendChild(mkItem(f)));tree.appendChild(g);
+  };
+  const filesOf=dirs=>FILES.filter(f=>{const d=f.path.includes('/')?f.path.split('/')[0]:'.';return dirs.includes(d);});
+  const def=FILES.find(f=>f.path==='08_Outputs/FAQ_v0.1.md');
+  const faq=document.createElement('button');faq.className='titem';
+  faq.innerHTML='<span class="cnt">FAQ</span>常见问题（10 问）';faq.onclick=()=>def&&openDoc(def.path);
+  const used=new Set();
+  Object.entries(NAV_GROUPS).forEach(([label,dirs])=>{
+    if(label==='常见问题'){const g=document.createElement('div');g.className='tgroup';g.innerHTML='<div class="glabel">常见问题</div>';g.appendChild(faq);tree.appendChild(g);return;}
+    const fs=filesOf(dirs);fs.forEach(f=>used.add(f.path));mkGroup(label,fs);
+  });
+  const rest=FILES.filter(f=>!used.has(f.path));
+  mkGroup('进阶·治理·其他',rest);
   $('#fstat').textContent=FILES.length+' 篇';
 }
 
@@ -237,6 +236,27 @@ async function openDoc(path,scrollTo){
     $('#docmeta').innerHTML=meta.join('');
 
     $('#content').innerHTML=marked.parse(body);
+
+    // 内部 .md 相对链接 → openDoc；目录链接 → 打开该目录下第一个文件
+    $('#content').querySelectorAll('a[href]').forEach(el=>{
+      const href=el.getAttribute('href');
+      if(/^(https?:|#|mailto:)/.test(href)) return;
+      const clean=decodeURIComponent(href.split('#')[0]);
+      if(clean.endsWith('.md')){
+        const base=currentPath?currentPath.replace(/[^/]+$/,''):'';
+        const norm=(base+clean).split('/').reduce((acc,part)=>{
+          if(part==='.'||part==='')return acc;
+          if(part==='..')acc.pop();else acc.push(part);return acc;
+        },[]).join('/');
+        el.setAttribute('href','#'+encodeURIComponent(norm));
+        el.addEventListener('click',e=>{e.preventDefault();openDoc(norm);});
+      } else if(clean.endsWith('/')){
+        el.addEventListener('click',e=>{e.preventDefault();
+          const first=FILES.find(f=>f.path.startsWith(clean)&&f.path.endsWith('.md'));
+          if(first)openDoc(first.path);
+        });
+      }
+    });
 
     // 标题锚点 + 目录
     const toclist=[];let n=0;
@@ -282,9 +302,10 @@ function snippet(text,q){
   const s=Math.max(0,i-32),e=Math.min(text.length,i+q.length+48);
   return( s>0?'…':'')+esc(text.slice(s,e)).replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi'),m=>'<mark>'+m+'</mark>')+(e<text.length?'…':'');
 }
+let SEARCHQ='';function renderSearch(q){doSearch(q);}
 function doSearch(q){
   const tree=$('#tree');
-  if(!q){renderTree();return}
+  if(!q){SEARCHQ='';renderTree();return}
   tree.innerHTML='';
   const ql=q.toLowerCase();
   const hits=[];
@@ -339,7 +360,7 @@ async function loadIndex(){
   renderTree();
 }
 $('#rescan').onclick=async()=>{await loadIndex();if(currentPath)openDoc(currentPath)};
-$('#search').addEventListener('input',e=>{clearTimeout(window._st);window._st=setTimeout(()=>doSearch(e.target.value.trim()),160)});
+const sbox=$('#search');SEARCHQ='';sbox.addEventListener('input',e=>{clearTimeout(window._st);window._st=setTimeout(()=>{SEARCHQ=e.target.value;renderTree();},160)});
 
 (async function init(){
   marked.setOptions({gfm:true});
